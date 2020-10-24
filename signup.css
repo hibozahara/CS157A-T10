@@ -1,0 +1,67 @@
+/*styling for the sign up page -- signup.html */
+
+
+body{
+  background-color: #000000;
+}
+
+
+ input[type=text], input[type=password] {
+  width: 40%;
+  padding: 20px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  background: #f1f1f1;
+  border: none;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+}
+
+button {
+  background-color: #13B650;
+  color: white;
+  font-weight: bold;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity:5;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #F03712;
+}
+
+.cancelbtn {
+  float: left;
+  width: 25%;
+}
+
+.signupbtn {
+  float: right;
+  width: 25%;
+}
+
+.container {
+  padding: 20px;
+
+}
+
+.signupbts::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*buttons resize as screen size changes */
+@media screen and (max-width: 310px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}

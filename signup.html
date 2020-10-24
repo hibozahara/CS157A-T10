@@ -1,0 +1,41 @@
+
+<!-- HTML page for signup form -->
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <link rel="stylesheet" href="signup.css">
+   <meta charset="utf-8">
+   <title>FireStock - Registration</title>
+ </head>
+
+ <body>
+<form style="border:3px solid #871B05">
+  <div class="container">
+    <h1 style="color:white;">Sign up below!</h1>
+    <p style="color:white;">Please fill in this form to create a FireStock account.</p>
+    <hr>
+
+    <label style="color:white;" for="name"><b>Full Name</b></label> <br>
+    <input type="text" placeholder="Enter Full Name" name="name" required> <br>
+
+  <!--  <input  style="width: 400px;" type="text" placeholder="Enter Full Name" name="name" required><br> -->
+
+
+    <label style="color:white;" for="email"><b>Email</b></label> <br>
+    <input type="text" placeholder="Enter Email" name="email" required><br>
+
+    <label style="color:white;" for="pwd"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="pwd" required><br>
+
+    <label style="color:white;" for="pwdc"><b>Confirm Password</b></label><br>
+    <input type="password" placeholder="Repeat Password" name="pwdc" required>
+
+    <div class="signupbts">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>
