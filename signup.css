@@ -2,9 +2,13 @@
 
 
 body{
-  background-color: #000000;
+  background-color: #ffefa0;
 }
 
+
+#form{
+  background-color: #ac4b1c;
+}
 
  input[type=text], input[type=password] {
   width: 40%;
@@ -20,8 +24,8 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 button {
-  background-color: #13B650;
-  color: white;
+  background-color: #ffefa0;
+  color: #ac4b1c;
   font-weight: bold;
   padding: 14px 20px;
   border: none;
@@ -35,7 +39,7 @@ button:hover {
 
 .cancelbtn {
   padding: 14px 20px;
-  background-color: #F03712;
+  background-color: #ffefa0;
 }
 
 .cancelbtn {
