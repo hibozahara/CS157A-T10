@@ -37,6 +37,7 @@ button:hover {
   opacity:5;
 }
 
+
 .cancelbtn {
   padding: 14px 20px;
   background-color: #ffefa0;
@@ -46,6 +47,16 @@ button:hover {
   float: left;
   width: 25%;
 }
+
+.loginbtn{
+  padding: 14px 20px;
+  margin-top: -70px;
+  background-color: #ffefa0;
+  float: right;
+  width: 9%;
+  
+}
+
 
 .signupbtn {
   float: right;
