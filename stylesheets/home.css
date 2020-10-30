@@ -79,27 +79,20 @@ background-color:#ffd57e;
 
 }
 
-#section-c{
-  display:flex;
+img{
+  width: 1000px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-#section-c div{
-  padding-top: 5px;
-
+.image-entity{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 50px 0px 50px;
 }
 
-
-#box-1 {
-     width: 248px;
-     height: 48px;
-  }
-
-#box-2 {
-  width: 148px;
-  height: 100px;
-    }
-
-
-#box-2 img {
-     width: 100%;
-  }
+#home-images{
+  text-align: center;
+}
