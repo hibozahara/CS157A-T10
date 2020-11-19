@@ -7,10 +7,11 @@ USE FireStock;
 -- Entity Sets
 --  User
 CREATE TABLE IF NOT EXISTS user (
-	userId BIGINT UNSIGNED,
+	userId BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	email VARCHAR(255),
-    username VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
+    salt VARBINARY(255) NOT NULL,
     PRIMARY KEY (userId)
 );
 
@@ -23,28 +24,28 @@ CREATE TABLE IF NOT EXISTS admin (
 
 -- Type
 CREATE TABLE IF NOT EXISTS type (
-	typeId BIGINT UNSIGNED,
+	typeId BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     typeName VARCHAR(255) NOT NULL,
     PRIMARY KEY (typeId)
 );
  
  -- County
  CREATE TABLE IF NOT EXISTS county (
-	countyId BIGINT unsigned,
+	countyId BIGINT unsigned NOT NULL AUTO_INCREMENT,
     countyName VARCHAR(255) NOT NULL,
     PRIMARY KEY(countyId)
  );
  
 -- City
 CREATE TABLE IF NOT EXISTS city (
-	cityId BIGINT unsigned,
+	cityId BIGINT unsigned NOT NULL AUTO_INCREMENT,
     cityName  VARCHAR(255) NOT NULL,
     PRIMARY KEY (cityId)
 ); 
 
  -- Weak set of User, Donation
  CREATE TABLE IF NOT EXISTS donation (
-	donationId BIGINT UNSIGNED,
+	donationId BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     userId BIGINT UNSIGNED,
     typeId BIGINT UNSIGNED,
     countyId BIGINT UNSIGNED,
