@@ -15,7 +15,11 @@
 			<a href="#">Donations</a>
 			<a href="#">My Donations</a>
 			<a href="#">My Request</a>
-			<a href="#">Logout</a>
+			<form action="<%= request.getContextPath() %>/logout" method="post">
+				<div class="signupbts">
+					<button type="submit" class="loginbtn">Logout</button>
+				</div>
+			</form>
 		</div>
 	</div>
 	
@@ -116,6 +120,16 @@ body{
 	background-color: #ac4b1c;
 	color: #ffefa0;
 	text-align: center:
+}
+
+button {
+	background-color: #ffefa0;
+	color: #ac4b1c;
+	font-weight: bold;
+	padding: 14px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
 }
 </style>
 

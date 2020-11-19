@@ -4,6 +4,15 @@ public class User {
 	private String name;
 	private String email;
 	private String password;
+	private byte[] salt;
+
+	public byte[] getSalt() {
+		return salt;
+	}
+
+	public void setSalt(byte[] salt) {
+		this.salt = salt;
+	}
 
 	public String getName() {
 		return name;
