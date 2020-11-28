@@ -12,19 +12,21 @@
 	<div class="navbar">
 		<a href="#">Logo</a>
 		<div class="navbar-right">
-			<a href="#">Donations</a>
-			<a href="#">My Donations</a>
-			<a href="#">My Request</a>
-			<a href="#">Logout</a>
+			<a href="postings.jsp">Donations</a>
+			<a href="mydonations.jsp">My Donations</a>
+			<a href="myrequests.jsp">My Request</a>
+			<a href="login.jsp">Logout</a>
 		</div>
 	</div>
+	<h3  style="text-align:center">Items You Requested:</h3>
 
 	<div class="row">
 		<div class="card">
 			<div class="container">
 				<div class="header">Request 1</div>
-				<div style="text-align:center"><img alt="myimage" src="#"></div>
-				<div style="text-align:center"> Description of Donation:</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Status</button></div>
       
@@ -34,8 +36,9 @@
 		<div class="card">
 			<div class="container">
 				<div class="header">Request 2</div>
-				<div style="text-align:center"><img alt="myimage" src="#"></div>
-				<div style="text-align:center"> Description of Donation:</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
 				<br>
 				<div class="text-center"><button type="submit" class="button1">Status</button></div>
 			</div>
@@ -43,8 +46,9 @@
 		<div class="card">
 			<div class="container">
 				<div class="header">Request 3</div>
-				<div style="text-align:center"><img alt="myimage" src="#"></div>
-				<div style="text-align:center"> Description of Donation:</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
 				<br>
 				<div class="text-center"><button type="submit" class="button1">Status</button></div>
 			</div>
@@ -52,8 +56,9 @@
 		<div class="card">
 			<div class="container">
 				<div class="header">Request 4</div>
-				<div style="text-align:center"><img alt="myimage" src="#"></div>
-				<div style="text-align:center"> Description of Donation:</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
 				<br>
 				<div class="text-center"><button type="submit" class="button1">Status</button></div>
 			</div>
@@ -131,6 +136,7 @@ body{
     font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 12px;
     padding: 10px 20px;
+    font-weight: bold;
 
   }
   .text-center {

@@ -19,7 +19,7 @@ public class UserDao {
 		Class.forName("com.mysql.jdbc.Driver");
 		
 		try(Connection connection = DriverManager
-				.getConnection("jdbc:mysql://localhost:3306/firestock", "root", "root");
+				.getConnection("jdbc:mysql://localhost:3306/Firestock", "zaharah", "zahara1099");
 				PreparedStatement ps = connection.prepareStatement(INSERT_USERS_SQL)) 
 		{
 			ps.setInt(1, 16);

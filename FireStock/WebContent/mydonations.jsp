@@ -12,72 +12,77 @@
 	<div class="navbar">
 		<a href="#">Logo</a>
 		<div class="navbar-right">
-			<a href="#">Donations</a>
-			<a href="#">My Donations</a>
-			<a href="#">My Request</a>
-			<a href="#">Logout</a>
+			<a href="postings.jsp">Donations</a>
+			<a href="mydonations.jsp">My Donations</a>
+			<a href="myrequests.jsp">My Request</a>
+			<a href="login.jsp">Logout</a>
 		</div>
 	</div>
+	
+	<h3  style="text-align:center">Items You Donated:</h3>
 
 	<div class="row">
 		<div class="card">
 			<div class="container">
-        	<button type="submit" class="button3">Edit</button>
-			<button type="submit" class="button4">Delete</button>
-			<br><br>
+        	
+        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
+			<button type="submit" class="button4">Delete</button> </div>
+				<br>
 				<div class="header">Post 1</div>
-				<div style="text-align:center"><img alt="myimage" src="#"></div>
-				<div style="text-align:center"> Description of Donation:</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
 				<br>
-         <button type="submit" class="button1">Accept</button>
-        <button type="submit" class="button2">Decline</button>
+        	    <button type="submit" class="button1">Accept</button>
+        		<button type="submit" class="button2">Decline</button>
 			</div>
 		</div>
 
 		<div class="card">
 			<div class="container">
-        	<button type="submit" class="button3">Edit</button>
-			<button type="submit" class="button4">Delete</button>
-			<br><br>
+        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
+				<button type="submit" class="button4">Delete</button> </div>
+				<br>
 				<div class="header">Post 2</div>
-				<div style="text-align:center"><img alt="myimage" src="#"></div>
-				<div style="text-align:center"> Description of Donation:</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
 				<br>
-         <button type="submit" class="button1">Accept</button>
-        <button type="submit" class="button2">Decline</button>
+         		<button type="submit" class="button1">Accept</button>
+        		<button type="submit" class="button2">Decline</button>
 			</div>
 		</div>
+		
 		<div class="card">
 			<div class="container">
-        <button type="submit" class="button3">Edit</button>
-		<button type="submit" class="button4">Delete</button>
-		<br><br>
+        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
+				<button type="submit" class="button4">Delete</button> </div>
+				<br>
 				<div class="header">Post 3</div>
-				<div style="text-align:center"><img alt="myimage" src="#"></div>
-				<div style="text-align:center"> Description of Donation:</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
 				<br>
-         <button type="submit" class="button1">Accept</button>
-        <button type="submit" class="button2">Decline</button>
+         		<button type="submit" class="button1">Accept</button>
+        		<button type="submit" class="button2">Decline</button>
 			</div>
 		</div>
+		
 		<div class="card">
 			<div class="container">
-        <button type="submit" class="button3">Edit</button>
-		<button type="submit" class="button4">Delete</button>
-		<br><br>
-				<div class="header">Post 4</div>
-				<div style="text-align:center"><img alt="myimage" src="#"></div>
-				<div style="text-align:center"> Description of Donation:</div>
+        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
+				<button type="submit" class="button4">Delete</button> </div>
 				<br>
-         <button type="submit" class="button1">Accept</button>
-        <button type="submit" class="button2">Decline</button>
+				<div class="header">Post 4</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
+				<br>
+         		<button type="submit" class="button1">Accept</button>
+       			<button type="submit" class="button2">Decline</button>
 			</div>
 		</div>
-
-	
-
 	</div>
-
 </body>
 
 <style>
@@ -120,6 +125,7 @@ body{
   	align-self:center;
   	margin-top: 50px;
 	margin-left: 25px;
+	margin-bottom: 5px;
 	background-color: #0059b3;
 
 }
@@ -149,6 +155,7 @@ body{
     font-size: 12px;
     padding: 10px 20px;
     text-align: center;
+    font-weight: bold;
 
   }
   .button2 {
@@ -162,6 +169,7 @@ body{
       font-size: 12px;
       padding: 10px 20px;
       text-align: center;
+      font-weight: bold;
 	
 
     }
@@ -176,13 +184,10 @@ body{
         font-size: 12px;
         padding: 5px 15px;
         text-align: center;
-	
-		
-
-
+ 		font-weight: bold;
       }
 
-      .button4 {
+     .button4 {
           background-color: #e68a00;
           border-radius: 3px;
           border: none;
@@ -193,9 +198,13 @@ body{
           font-size: 12px;
           padding: 5px 15px;
           text-align: center;
-
+          font-weight: bold;
 
         }
+        
+  .text-center {
+  text-align: center;
+}
 
 
 
