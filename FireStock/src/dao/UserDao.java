@@ -30,6 +30,7 @@ public class UserDao {
 		
 		try(Connection connection = DriverManager
 				.getConnection(jdbcURL, dbUser, dbPassword);
+
 				PreparedStatement ps = connection.prepareStatement(INSERT_USERS_SQL)) 
 		{
 			//Salt and hash password

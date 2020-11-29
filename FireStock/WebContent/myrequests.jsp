@@ -5,77 +5,65 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Donation Listings</title>
+<title>My Requests</title>
 </head>
 
 <body>
-
 	<div class="navbar">
 		<a href="#">Logo</a>
 		<div class="navbar-right">
-			<a href="#">Donations</a>
-			<a href="#">My Donations</a>
-			<a href="#">My Request</a>
-			<form action="<%= request.getContextPath() %>/logout" method="post">
-				<div class="signupbts">
-					<button type="submit" class="loginbtn">Logout</button>
-				</div>
-			</form>
+			<a href="postings.jsp">Donations</a>
+			<a href="mydonations.jsp">My Donations</a>
+			<a href="myrequests.jsp">My Request</a>
+			<a href="login.jsp">Logout</a>
 		</div>
 	</div>
-	
-	<a href="newPost.jsp"><button type="submit" class="buttonupload">Upload A Donation</button></a>
-	
-	<h3  style="text-align:center">Donation Listings</h3>
-	
+	<h3  style="text-align:center">Items You Requested:</h3>
+
 	<div class="row">
 		<div class="card">
 			<div class="container">
-        	<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Post 1</div>
+				<div class="header">Request 1</div>
 				<div style="text-align:center"> Item(s):</div>
 				<div style="text-align:center"> Quantity:</div>
 				<div style="text-align:center"> Category:</div>
 				<br>
-         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+         		<div class="text-center"><button type="submit" class="button1">Status</button></div>
+      
 			</div>
 		</div>
 
 		<div class="card">
 			<div class="container">
-        		<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Post 2</div>
+				<div class="header">Request 2</div>
 				<div style="text-align:center"> Item(s):</div>
 				<div style="text-align:center"> Quantity:</div>
 				<div style="text-align:center"> Category:</div>
 				<br>
-         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+				<div class="text-center"><button type="submit" class="button1">Status</button></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="container">
+				<div class="header">Request 3</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
+				<br>
+				<div class="text-center"><button type="submit" class="button1">Status</button></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="container">
+				<div class="header">Request 4</div>
+				<div style="text-align:center"> Item(s):</div>
+				<div style="text-align:center"> Quantity:</div>
+				<div style="text-align:center"> Category:</div>
+				<br>
+				<div class="text-center"><button type="submit" class="button1">Status</button></div>
 			</div>
 		</div>
 		
-		<div class="card">
-			<div class="container">
-        		<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Post 3</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
-				<br>
-         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
-			</div>
-		</div>
-		
-		<div class="card">
-			<div class="container">
-        		<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Post 4</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
-				<br>
-         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
-			</div>
-		</div>
 	</div>
 
 </body>
@@ -137,20 +125,6 @@ body{
 	color: #ffffff;
 	text-align: center;
 }
-<<<<<<< HEAD
-
-button {
-	background-color: #ffefa0;
-	color: #ac4b1c;
-	font-weight: bold;
-	padding: 14px 20px;
-	border: none;
-	cursor: pointer;
-	width: 100%;
-}
-</style>
-=======
->>>>>>> master
 
 .button1 {
     background-color: #009900;
@@ -162,46 +136,15 @@ button {
     font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 12px;
     padding: 10px 20px;
-    text-align: center;
     font-weight: bold;
 
   }
-  .button2 {
-      background-color: #990000;
-      border-radius: 3px;
-      border: none;
-      color: #FFFFFF;
-      cursor: pointer;
-      display: inline-block;
-      font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
-      font-size: 12px;
-      padding: 10px 20px;
-      text-align: center;
-	
-
-    }
-    .buttonupload {
-        background-color: #1A237E;
-        border-radius: 10px;
-        border: none;
-        color: #FFFFFF;
-        cursor: pointer;
-        display: inline-block;
-        font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 16px;
-        padding: 10px 15px;
-        text-align: center;
-        margin-top: 10px;
-        position: absolute; 
-        right: 0;
-        font-weight: bold;
-
-      }
- 
- .text-center {
+  .text-center {
   text-align: center;
 }
-      
+
+
+
 
 </style>
 </html>
