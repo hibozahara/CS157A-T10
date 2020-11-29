@@ -13,10 +13,14 @@
 	<div class="navbar">
 		<a href="#">Logo</a>
 		<div class="navbar-right">
-			<a href="postings.jsp">Donations</a>
-			<a href="mydonations.jsp">My Donations</a>
-			<a href="myrequests.jsp">My Request</a>
-			<a href="login.jsp">Logout</a>
+			<a href="#">Donations</a>
+			<a href="#">My Donations</a>
+			<a href="#">My Request</a>
+			<form action="<%= request.getContextPath() %>/logout" method="post">
+				<div class="signupbts">
+					<button type="submit" class="loginbtn">Logout</button>
+				</div>
+			</form>
 		</div>
 	</div>
 	
@@ -133,6 +137,20 @@ body{
 	color: #ffffff;
 	text-align: center;
 }
+<<<<<<< HEAD
+
+button {
+	background-color: #ffefa0;
+	color: #ac4b1c;
+	font-weight: bold;
+	padding: 14px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+</style>
+=======
+>>>>>>> master
 
 .button1 {
     background-color: #009900;

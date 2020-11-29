@@ -7,12 +7,30 @@
   </welcome-file-list>
   
   <servlet>
-  	<servlet-name>UserServlet</servlet-name>
-  	<servlet-class>controller.UserServlet</servlet-class>
+  	<servlet-name>UserRegisterServlet</servlet-name>
+  	<servlet-class>controller.UserRegisterServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  	<servlet-name>UserServlet</servlet-name>
+  	<servlet-name>UserRegisterServlet</servlet-name>
   	<url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UserLoginServlet</servlet-name>
+  	<servlet-class>controller.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserLoginServlet</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UserLogoutServlet</servlet-name>
+  	<servlet-class>controller.UserLogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserLogoutServlet</servlet-name>
+  	<url-pattern>/logout</url-pattern>
   </servlet-mapping>
 </web-app>
