@@ -95,23 +95,23 @@ VALUES
 ("Santa Rosa");
 
 -- 6 donation
-INSERT IGNORE INTO donation (userId, typeId, countyId, cityId, quantity, picture)
+INSERT IGNORE INTO donation (userId, title, typeId, countyId, cityId, quantity, picture)
 VALUES
-(1, 1, 3, 3, 2, null),
-(2, 2, 2, 2, 5, null),
-(3, 4, 5, 5, 1, null),
-(4, 3, 4, 4, 1, null),
-(5, 6, 2, 2, 3, null),
-(6, 8, 1, 1, 1, null),
-(7, 9, 6, 6, 5, null),
-(8,10, 7, 7, 10, null),
-(9, 11, 8, 8, 1, null),
-(10, 15, 2, 2, 2, null),
-(11, 10, 1, 1, 1, null),
-(12, 14, 1, 1, 3, null),
-(13, 13, 9, 9, 5, null),
-(14, 13, 8, 8, 3, null),
-(15, 12, 11, 11, 3, null);
+(1, "Blankets" , 1, 3, 3, 2, null),
+(2, "Canned Fruit", 2, 2, 2, 5, null),
+(3, "Cat Food", 4, 5, 5, 1, null),
+(4, "Shampoo and Conditioner", 3, 4, 4, 1, null),
+(5, "Portable Generator", 6, 2, 2, 3, null),
+(6, "Batteries", 8, 1, 1, 1, null),
+(7, "Plates", 9, 6, 6, 5, null),
+(8, "Toilet paper", 10, 7, 7, 10, null),
+(9, "Coloring Book and Crayons", 11, 8, 8, 1, null),
+(10, "Portable Stove", 15, 2, 2, 2, null),
+(11, "First Aid Kit", 10, 1, 1, 1, null),
+(12, "Sweaters", 14, 1, 1, 3, null),
+(13, "Tent", 13, 9, 9, 5, null),
+(14, "Water Bottles", 13, 8, 8, 3, null),
+(15, "Sleeping Bag", 12, 11, 11, 3, null);
 
 -- 7 Request
 INSERT IGNORE INTO request (userId, donationId, status) 

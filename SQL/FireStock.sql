@@ -47,11 +47,12 @@ CREATE TABLE IF NOT EXISTS city (
  CREATE TABLE IF NOT EXISTS donation (
 	donationId BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     userId BIGINT UNSIGNED,
+    title VARCHAR(255) NOT NULL,
     typeId BIGINT UNSIGNED,
     countyId BIGINT UNSIGNED,
     cityId BIGINT UNSIGNED,
     quantity int NOT NULL,
-    picture LONGBLOB, 
+    picture VARCHAR(255) NULL, 
     PRIMARY KEY (donationId),
     FOREIGN KEY (userId) REFERENCES user(userId),
     FOREIGN KEY (typeId) REFERENCES type(typeId),
