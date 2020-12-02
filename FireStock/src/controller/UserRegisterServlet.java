@@ -68,7 +68,7 @@ public class UserRegisterServlet extends HttpServlet {
 //		RequestDispatcher dispatcher = request.getRequestDispatcher("/userDetails.jsp");
 //		dispatcher.forward(request, response);
 		
-		response.sendRedirect("userDetails.jsp");
+		response.sendRedirect("postings.jsp");
 	}
 
 }
