@@ -23,9 +23,7 @@
 			<input type="password" placeholder="Enter Password" name="password"
 				required><br>
 
-			<div class="signupbts">
-				<button type="button" class="cancelbtn">Reset</button>
-				
+			<div class="signupbts">				
 				<button type="submit" class="loginbtn">Login</button>
 			</div>
 		</div>
@@ -72,16 +70,6 @@ button:hover {
 	opacity: 5;
 }
 
-.cancelbtn {
-	padding: 14px 20px;
-	background-color: #ffd966;
-}
-
-.cancelbtn {
-	float: left;
-	width: 10%;
-}
-
 .loginbtn {
 	float: right;
 	width: 10%;
@@ -111,7 +99,4 @@ button:hover {
 	}
 }
 </style>
-
-
-
 </html>

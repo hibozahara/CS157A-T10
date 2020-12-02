@@ -10,13 +10,10 @@
 
 <body>
 	<header>
-		<a href="signup.jsp" class="myButton"><b>Sign up!</b></a>
+		<a href="signup.jsp" class="signUpButton"><b>Sign up!</b></a>
+		<a href="login.jsp" class="loginButton" ><b>Login</b></a>
 		<a href="contactadmin.jsp" class="contactButton"><b>Help</b></a>
 		<h1 id="FS">FireStock</h1>
-		<div id="logo"> 
-		<!--  <img src="images/logo.png" style="width:40px;height:90px;"> -->
-		</div> 
-		
 	</header>
 
 	<form style="border: 3px solid #501b1d">
@@ -25,7 +22,7 @@
 				<b>THE PROBLEM:</b>
 			</p>
 			<p>Unlike prior years, California has faced the largest outburst
-				of wildfires across the state. These wildfires have desvasted the
+				of wild fires across the state. These wild fires have devastated the
 				local environment and uprooted people from their homes.</p>
 		</section>
 	</form>
@@ -78,7 +75,7 @@ p {
 	text-align: center;
 }
 
-.myButton {
+.signUpButton {
 	padding: 15px;
 	display: block;
 	background-color: #ffd966;
@@ -86,6 +83,20 @@ p {
 	position: absolute;
 	top: 10px;
 	right: 10px;
+	font-size: 18px;
+	text-decoration: none;
+	color: #501b1d;
+	border-radius: 10px;
+}
+
+.loginButton{
+	padding: 15px;
+	display: block;
+	background-color: #ffd966;
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	right: 130px;
 	font-size: 18px;
 	text-decoration: none;
 	color: #501b1d;
@@ -106,14 +117,16 @@ p {
 	border-radius: 6px;
 }
 
-.myButton:hover {
+.signUpButton:hover {
 	background-color: #ffd57e;
 }
 
-.logo {
-	position:fixed; 
-	top:0; 
-	left:0;
+.loginButton:hover{
+	background-color: #ffd57e;
+}
+
+.contactButton:hover{
+	background-color: #ffd57e;
 }
 
 #FS {
