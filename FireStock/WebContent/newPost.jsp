@@ -11,19 +11,19 @@
 <body>
 	<form style="border: 3px solid #fca652">
 		<div class="container" id="form">
-			<h1 style="color: #ffefa0;">Donation Details</h1>
+			<h1 style="color: #ffd966;">Donation Details</h1>
 			<a href="postings.jsp"><button type="button" class="loginbtn">Back</button></a>
-			<p style="color: #ffefa0;"> Thank you for your generous donation in advance! - FireStock Team</p>
+			<p style="color: #ffd966;"><b> Thank you for your generous donation in advance! - FireStock Team</b></p>
 			<hr>
 
-			<label style="color: #ffefa0;" for="name"><b>Item Name</b></label> <br>
+			<label style="color: #ffd966;" for="name"><b>Item Name</b></label> <br>
 			<input type="text" placeholder="Enter Item Name" name="name" required>
 			<br>
 
-			<label style="color: #ffefa0;" for="quantity"><b>Quantity</b></label> <br>
+			<label style="color: #ffd966;" for="quantity"><b>Quantity</b></label> <br>
 			<input type="text" placeholder="Enter Quantity " name="quantity" required><br>
 
-			<label style="color: #ffefa0;" for="category"><b>Category</b></label><br>
+			<label style="color: #ffd966;" for="category"><b>Category</b></label><br>
 			<input type="text" placeholder="Enter Category Type" name="category" required>
 			<br>
 
@@ -39,11 +39,11 @@
 
 <style>
 body {
-	background-color: #ffefa0;
+	background-color: #ffd966;
 }
 
 #form {
-	background-color: #ac4b1c;
+	background-color: #501b1d;
 }
 
 input[type=text], input[type=password] {
@@ -60,8 +60,8 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 button {
-	background-color: #ffefa0;
-	color: #ac4b1c;
+	background-color: #ffd966;
+	color: #501b1d;
 	font-weight: bold;
 	padding: 14px 20px;
 	border: none;
@@ -75,7 +75,7 @@ button:hover {
 
 .postbtn {
 	padding: 14px 20px;
-	background-color: #ffefa0;
+	background-color: #ffd966;
 }
 
 .postbtn {
@@ -86,7 +86,7 @@ button:hover {
 .loginbtn {
 	padding: 14px 20px;
 	margin-top: -70px;
-	background-color: #ffefa0;
+	background-color: #ffd966;
 	float: right;
 	width: 9%;
 }

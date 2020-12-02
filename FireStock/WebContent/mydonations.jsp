@@ -93,12 +93,12 @@ body{
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 17px;
 	line-height: 1.6;
-	background-color: #ffefa0;
+	background-color: #ffd966;
 }
 
 .navbar {
 	overflow: hidden;
-	background-color: #ac4b1c;
+	background-color: #501b1d;
 }
 
 .navbar a{
@@ -106,7 +106,7 @@ body{
 	text-align: center;
 	padding-left: 20px;
 	padding-top: 20px;
-	color: #ffefa0;
+	color: #ffd966;
 	text-decoration: none;
 	font-weight: bold;
 }

@@ -5,38 +5,39 @@
 
 <head>
 <meta charset="utf-8">
-<title>FireStock - Login</title>
+<title>Contact an Admin</title>
 </head>
 
 <body>
-	<form style="border: 3px solid #fca652" method="post" action="<%= request.getContextPath() %>/login">
+	<form action="mailto:someone@example.com" method="post"style="border: 3px solid #fca652">
 		<div class="container" id="form">
-			<a href="home.jsp"><button type="button" class="backbtn">BACK</button></a>
-			<br>
-			<h1 style="color: #ffd966;">Login</h1>
+			<h1 style="color: #ffd966;">Contact Us</h1>
+			<a href="home.jsp"><button type="button" class="loginbtn">Back</button></a>
+			<p style="color: #ffd966;"><b> The Team will respond to you within 3-5 business days.</b></p>
 			<hr>
 
-			<label style="color: #ffd966;" for="email"><b>Email</b></label> <br>
-			<input type="text" placeholder="Enter Email" name="email" required><br>
+			<label style="color: #ffd966;" for="name"><b>Your Name</b></label> <br>
+			<input type="text" placeholder="Enter Your Name" name="name" required>
+			<br>
 
-			<label style="color: #ffd966;" for="pwd"><b>Password</b></label><br>
-			<input type="password" placeholder="Enter Password" name="password"
-				required><br>
+			<label style="color: #ffd966;" for="email"><b>Email</b></label> <br>
+			<input type="text" placeholder="Enter Email " name="email" required><br>
+
+			<label style="color: #ffd966;" for="message"><b>Message</b></label><br>
+			<input type="text" placeholder="Enter Message Here" name="message" required>
+			<br>
+
 
 			<div class="signupbts">
-				<button type="button" class="cancelbtn">Reset</button>
-				
-				<button type="submit" class="loginbtn">Login</button>
+				<a href="home.jsp">
+					<button type="button" class="postbtn">Send Now</button>
+				</a>
 			</div>
 		</div>
 	</form>
 </body>
 
 <style>
-h1 {
-	text-align: center;
-}
-
 body {
 	background-color: #ffd966;
 }
@@ -72,26 +73,27 @@ button:hover {
 	opacity: 5;
 }
 
-.cancelbtn {
+.postbtn {
 	padding: 14px 20px;
 	background-color: #ffd966;
 }
 
-.cancelbtn {
+.postbtn {
 	float: left;
-	width: 10%;
+	width: 25%;
 }
 
 .loginbtn {
+	padding: 14px 20px;
+	margin-top: -70px;
+	background-color: #ffd966;
 	float: right;
-	width: 10%;
+	width: 9%;
 }
 
-.backbtn {
-	padding: 14px 10px;
-	background-color: #ffd966;
-	float: left;
-	width: 10%;
+.signupbtn {
+	float: right;
+	width: 25%;
 }
 
 .container {
@@ -111,7 +113,5 @@ button:hover {
 	}
 }
 </style>
-
-
 
 </html>

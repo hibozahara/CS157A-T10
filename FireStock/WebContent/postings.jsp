@@ -13,12 +13,12 @@
 	<div class="navbar">
 		<a href="#">Logo</a>
 		<div class="navbar-right">
-			<a href="#">Donations</a>
-			<a href="#">My Donations</a>
-			<a href="#">My Request</a>
+			<a href="postings.jsp">Donations</a>
+			<a href="mydonations.jsp">My Donations</a>
+			<a href="myrequests.jsp">My Request</a>
 			<form action="<%= request.getContextPath() %>/logout" method="post">
 				<div class="signupbts">
-					<button type="submit" class="loginbtn">Logout</button>
+					<button type="submit" class="logoutbtn">Logout</button>
 				</div>
 			</form>
 		</div>
@@ -88,12 +88,12 @@ body{
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 17px;
 	line-height: 1.6;
-	background-color: #ffefa0;
+	background-color: #ffd966;
 }
 
 .navbar {
 	overflow: hidden;
-	background-color: #ac4b1c;
+	background-color: #501b1d;
 }
 
 .navbar a{
@@ -101,7 +101,7 @@ body{
 	text-align: center;
 	padding-left: 20px;
 	padding-top: 20px;
-	color: #ffefa0;
+	color: #ffd966;
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -137,21 +137,16 @@ body{
 	color: #ffffff;
 	text-align: center;
 }
-<<<<<<< HEAD
 
 button {
-	background-color: #ffefa0;
-	color: #ac4b1c;
+	background-color: #ffd966;
+	color: #501b1d;
 	font-weight: bold;
 	padding: 14px 20px;
 	border: none;
 	cursor: pointer;
 	width: 100%;
 }
-</style>
-=======
->>>>>>> master
-
 .button1 {
     background-color: #009900;
     border-radius: 3px;
@@ -189,19 +184,28 @@ button {
         display: inline-block;
         font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
-        padding: 10px 15px;
+        padding: 10px 10px;
         text-align: center;
         margin-top: 10px;
         position: absolute; 
         right: 0;
         font-weight: bold;
+        width: 20%;
 
       }
+      
+   .logoutbtn {
+	padding: 20px 5px;
+	margin-top: 8px;
+	margin-right: 30px;
+	background-color: #ffd966;
+	float: right;
+	width: 24%;
+	border-radius: 10px;
+}
  
  .text-center {
   text-align: center;
 }
-      
-
 </style>
 </html>

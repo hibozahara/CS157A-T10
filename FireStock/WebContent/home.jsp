@@ -10,12 +10,16 @@
 
 <body>
 	<header>
-		<a href="signup.jsp" class="myButton">Sign up!</a> <a href="#"
-			class="logo">Our logo goes here</a>
+		<a href="signup.jsp" class="myButton"><b>Sign up!</b></a>
+		<a href="contactadmin.jsp" class="contactButton"><b>Help</b></a>
 		<h1 id="FS">FireStock</h1>
+		<div id="logo"> 
+		<!--  <img src="images/logo.png" style="width:40px;height:90px;"> -->
+		</div> 
+		
 	</header>
 
-	<form style="border: 3px solid #ac4b1c">
+	<form style="border: 3px solid #501b1d">
 		<section id="section-a">
 			<p>
 				<b>THE PROBLEM:</b>
@@ -25,9 +29,9 @@
 				local environment and uprooted people from their homes.</p>
 		</section>
 	</form>
-	>
+	<br>
 
-	<form style="border: 3px solid #ac4b1c"></form>
+	<form style="border: 3px solid #501b1d"></form>
 	<section id="section-b">
 		<p>
 			<b>OUR MISSION:</b>
@@ -59,33 +63,47 @@ body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 17px;
 	line-height: 1.6;
-	background-color: #ac4b1c;
+	background-color: #501b1d;
 }
 
 h1 {
 	font-size: 60px;
 	line-height: 1.2;
-	color: #ffefa0;
+	color: #ffd966;
 }
 
 p {
 	font-size: 20px;
-	color: #ac4b1c;
+	color: #501b1d;
 	text-align: center;
 }
 
 .myButton {
 	padding: 15px;
 	display: block;
-	background-color: #ffefa0;
+	background-color: #ffd966;
 	text-align: center;
 	position: absolute;
 	top: 10px;
 	right: 10px;
 	font-size: 18px;
 	text-decoration: none;
-	color: #ac4b1c;
+	color: #501b1d;
 	border-radius: 10px;
+}
+
+.contactButton {
+	padding: 15px;
+	display: block;
+	background-color: #ffd966;
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 18px;
+	text-decoration: none;
+	color: #501b1d;
+	border-radius: 6px;
 }
 
 .myButton:hover {
@@ -93,17 +111,9 @@ p {
 }
 
 .logo {
-	padding: 20px;
-	display: block;
-	background-color: #ffefa0;
-	text-align: center;
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	font-size: 20px;
-	text-decoration: none;
-	color: #ac4b1c;
-	border-radius: 10px;
+	position:fixed; 
+	top:0; 
+	left:0;
 }
 
 #FS {
@@ -114,14 +124,14 @@ p {
 
 #section-a {
 	padding: 20px;
-	background: #ffefa0;
-	color: #ac4b1c;
+	background: #ffd966;
+	color: #501b1d;
 	text-align: center;
 }
 
 #section-b {
 	padding: 20px;
-	background: #ffefa0;
+	background: #ffd966;
 	text-align: center;
 }
 

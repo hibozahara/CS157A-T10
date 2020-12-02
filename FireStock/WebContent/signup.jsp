@@ -11,26 +11,26 @@
 <body>
 	<form style="border: 3px solid #fca652" action="<%= request.getContextPath() %>/register" method="post">
 		<div class="container" id="form">
-			<h1 style="color: #ffefa0;">Sign up below!</h1>
+			<h1 style="color: #ffd966;">Sign up below!</h1>
 			<a href="login.jsp"><button type="button" class="loginbtn">Login</button></a>
-			<p style="color: #ffefa0;">Please fill in this form to create a
+			<p style="color: #ffd966;">Please fill in this form to create a
 				FireStock account.</p>
 			<hr>
 
-			<label style="color: #ffefa0;" for="name"><b>Full Name</b></label> <br>
+			<label style="color: #ffd966;" for="name"><b>Full Name</b></label> <br>
 			<input type="text" placeholder="Enter Full Name" name="name" required>
 			<br>
 
 			<!--  <input  style="width: 400px;" type="text" placeholder="Enter Full Name" name="name" required><br> -->
 
 
-			<label style="color: #ffefa0;" for="email"><b>Email</b></label> <br>
+			<label style="color: #ffd966;" for="email"><b>Email</b></label> <br>
 			<input type="text" placeholder="Enter Email" name="email" required><br>
 
-			<label style="color: #ffefa0;" for="pwd"><b>Password</b></label><br>
+			<label style="color: #ffd966;" for="pwd"><b>Password</b></label><br>
 			<input type="password" placeholder="Enter Password" name="password" required> 
 			<br> 
-			<label style="color: #ffefa0;" for="pwdc"><b>Confirm
+			<label style="color: #ffd966;" for="pwdc"><b>Confirm
 				Password</b>
 			</label>
 			<br> 
@@ -48,11 +48,11 @@
 
 <style>
 body {
-	background-color: #ffefa0;
+	background-color: #ffd966;
 }
 
 #form {
-	background-color: #ac4b1c;
+	background-color: #501b1d;
 }
 
 input[type=text], input[type=password] {
@@ -69,8 +69,8 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 button {
-	background-color: #ffefa0;
-	color: #ac4b1c;
+	background-color: #ffd966;
+	color: #501b1d;
 	font-weight: bold;
 	padding: 14px 20px;
 	border: none;
@@ -84,7 +84,7 @@ button:hover {
 
 .cancelbtn {
 	padding: 14px 20px;
-	background-color: #ffefa0;
+	background-color: #ffd966;
 }
 
 .cancelbtn {
@@ -95,7 +95,7 @@ button:hover {
 .loginbtn {
 	padding: 14px 20px;
 	margin-top: -70px;
-	background-color: #ffefa0;
+	background-color: #ffd966;
 	float: right;
 	width: 9%;
 }
