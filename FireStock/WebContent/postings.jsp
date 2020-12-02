@@ -17,9 +17,7 @@
 			<a href="mydonations.jsp">My Donations</a>
 			<a href="myrequests.jsp">My Request</a>
 			<form action="<%= request.getContextPath() %>/logout" method="post">
-				<div class="signupbts">
 					<button type="submit" class="logoutbtn">Logout</button>
-				</div>
 			</form>
 		</div>
 	</div>
@@ -32,7 +30,7 @@
 		<div class="card">
 			<div class="container">
         	<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Post 1</div>
+				<div class="header">Title</div>
 				<div style="text-align:center"> Item(s):</div>
 				<div style="text-align:center"> Quantity:</div>
 				<div style="text-align:center"> Category:</div>
@@ -44,7 +42,7 @@
 		<div class="card">
 			<div class="container">
         		<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Post 2</div>
+				<div class="header">Title</div>
 				<div style="text-align:center"> Item(s):</div>
 				<div style="text-align:center"> Quantity:</div>
 				<div style="text-align:center"> Category:</div>
@@ -56,7 +54,7 @@
 		<div class="card">
 			<div class="container">
         		<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Post 3</div>
+				<div class="header">Title</div>
 				<div style="text-align:center"> Item(s):</div>
 				<div style="text-align:center"> Quantity:</div>
 				<div style="text-align:center"> Category:</div>
@@ -68,7 +66,7 @@
 		<div class="card">
 			<div class="container">
         		<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Post 4</div>
+				<div class="header">Title</div>
 				<div style="text-align:center"> Item(s):</div>
 				<div style="text-align:center"> Quantity:</div>
 				<div style="text-align:center"> Category:</div>
@@ -147,6 +145,7 @@ button {
 	cursor: pointer;
 	width: 100%;
 }
+
 .button1 {
     background-color: #009900;
     border-radius: 3px;
@@ -159,42 +158,40 @@ button {
     padding: 10px 20px;
     text-align: center;
     font-weight: bold;
-
   }
-  .button2 {
-      background-color: #990000;
-      border-radius: 3px;
-      border: none;
-      color: #FFFFFF;
-      cursor: pointer;
-      display: inline-block;
-      font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
-      font-size: 12px;
-      padding: 10px 20px;
-      text-align: center;
-	
-
-    }
-    .buttonupload {
-        background-color: #1A237E;
-        border-radius: 10px;
-        border: none;
-        color: #FFFFFF;
-        cursor: pointer;
-        display: inline-block;
-        font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 16px;
-        padding: 10px 10px;
-        text-align: center;
-        margin-top: 10px;
-        position: absolute; 
-        right: 0;
-        font-weight: bold;
-        width: 20%;
-
-      }
+  
+.button2 {
+    background-color: #990000;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+    
+.buttonupload {
+    background-color: #1A237E;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 10px 10px;
+    text-align: center;
+    margin-top: 10px;
+    position: absolute; 
+    right: 0;
+    font-weight: bold;
+    width: 20%;
+  }
       
-   .logoutbtn {
+.logoutbtn {
 	padding: 20px 5px;
 	margin-top: 8px;
 	margin-right: 30px;
@@ -204,7 +201,7 @@ button {
 	border-radius: 10px;
 }
  
- .text-center {
+.text-center {
   text-align: center;
 }
 </style>

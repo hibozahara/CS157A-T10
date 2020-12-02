@@ -30,8 +30,10 @@
 			<input type="text" placeholder="Enter City" name="city" required><br>
 			
 			<label style="color: #ffd966;" for="county"><b>County</b></label><br>
-			<input type="text" placeholder="Enter County" name="county" required>
-			<br>
+			<input type="text" placeholder="Enter County" name="county" required><br>
+			
+			<label style="color: #ffd966;" for="picture"><b>Picture</b></label><br>
+			<input type="text" placeholder="Enter a image url" name="picture" required><br>
 
 
 			<div class="signupbts">
