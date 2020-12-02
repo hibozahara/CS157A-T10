@@ -16,15 +16,21 @@
 			<p style="color: #ffd966;"><b> Thank you for your generous donation in advance! - FireStock Team</b></p>
 			<hr>
 
-			<label style="color: #ffd966;" for="name"><b>Item Name</b></label> <br>
-			<input type="text" placeholder="Enter Item Name" name="name" required>
+			<label style="color: #ffd966;" for="name"><b>Donation Title</b></label> <br>
+			<input type="text" placeholder="Enter Donation Title" name="name" required>
 			<br>
 
 			<label style="color: #ffd966;" for="quantity"><b>Quantity</b></label> <br>
 			<input type="text" placeholder="Enter Quantity " name="quantity" required><br>
 
 			<label style="color: #ffd966;" for="category"><b>Category</b></label><br>
-			<input type="text" placeholder="Enter Category Type" name="category" required>
+			<input type="text" placeholder="Enter Category Type" name="category" required><br>
+			
+			<label style="color: #ffd966;" for="city"><b>City</b></label><br>
+			<input type="text" placeholder="Enter City" name="city" required><br>
+			
+			<label style="color: #ffd966;" for="county"><b>County</b></label><br>
+			<input type="text" placeholder="Enter County" name="county" required>
 			<br>
 
 
