@@ -42,6 +42,7 @@
 			
 			<div class="signupbts">
 				<input type="submit" class="postbtn" />
+
 			</div>
 		</div>
 	</form>
@@ -67,6 +68,15 @@ input[type=text], input[type=password] {
 
 input[type=text]:focus, input[type=password]:focus {
 	background-color: #ddd;
+}
+
+.customSelect{
+	width: 41.5%;
+	padding: 20px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	background: #f1f1f1;
+	border: none;
 }
 
 button {

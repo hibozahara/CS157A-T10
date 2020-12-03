@@ -63,12 +63,10 @@
                 <input type="submit" value="Request Now"></input> 
               </form>	
 	        </div>
-					
 				</div>
 			</div>
 		</div>
 	</c:forEach>
-
 </body>
 
 <style>

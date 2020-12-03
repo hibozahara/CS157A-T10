@@ -36,7 +36,9 @@
 			<a href="postings.jsp">Donations</a>
 			<a href="mydonations.jsp">My Donations</a>
 			<a href="myrequests.jsp">My Request</a>
-			<a href="login.jsp">Logout</a>
+			<form action="<%= request.getContextPath() %>/logout" method="post">
+					<button type="submit" class="logoutbtn">Logout</button>
+			</form>
 		</div>
 	</div>
 	<h3  style="text-align:center">Items You Requested:</h3>
@@ -60,76 +62,8 @@
 				</div>
 			</div>
 		</div>
-	</c:forEach>
-	
-	<!-- <div class="row">
-		<div class="card">
-			<div class="container">
-			<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Title</div>
-				<div class="cardElements" style="text-align:center"> Contact Information:</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> City:</div>
-				<div class="cardElements" style="text-align:center"> County:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<div class="text-center"><button type="submit" class="button1">Status</button></div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="card">
-			<div class="container">
-			<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Title</div>
-				<div class="cardElements" style="text-align:center"> Contact Information:</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> City:</div>
-				<div class="cardElements" style="text-align:center"> County:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<div class="text-center"><button type="submit" class="button1">Status</button></div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="card">
-			<div class="container">
-			<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Title</div>
-				<div class="cardElements" style="text-align:center"> Contact Information:</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> City:</div>
-				<div class="cardElements" style="text-align:center"> County:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<div class="text-center"><button type="submit" class="button1">Status</button></div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="card">
-			<div class="container">
-			<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Title</div>
-				<div class="cardElements" style="text-align:center"> Contact Information:</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> City:</div>
-				<div class="cardElements" style="text-align:center"> County:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<div class="text-center"><button type="submit" class="button1">Status</button></div>
-			</div>
-		</div>
-	</div> -->
 
+	</c:forEach>
 </body>
 
 <style>
@@ -222,6 +156,18 @@ h4{
     font-weight: bold;
 
   }
+  
+.logoutbtn {
+	padding: 20px 5px;
+	margin-top: 8px;
+	margin-right: 30px;
+	background-color: #ffd966;
+	float: right;
+	width: 24%;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
   .text-center {
   text-align: center;
 }
