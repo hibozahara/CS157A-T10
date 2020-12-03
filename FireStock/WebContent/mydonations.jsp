@@ -22,15 +22,16 @@
 // 		users.add(UserDao.getUserNameById(userId));
 // 	}
 // 	request.setAttribute("users", users);
+	UserDao userDao = new UserDao();
 	String email = (String) session.getAttribute("email");
-	int userId = UserDao.getUserIdByEmail(email);
+	int userId = userDao.getUserIdByEmail(email);
 	List<Donation> list = DonationDAO.getUsersAllDonations(userId);
 	request.setAttribute("list", list);
 
 	%>
 
 	<div class="navbar">
-		<img src="images/testlogo.png" alt="">
+		<img class="logo" src="images/testlogo.png" alt="">
 		<div class="navbar-right">
 			<a href="postings.jsp">Donations</a>
 			<a href="mydonations.jsp">My Donations</a>
@@ -47,28 +48,34 @@
 		<input type="text" value="<%= session.getAttribute("email") %>" />
 	</div>
 
-	<div class="row">
-		<c:forEach items="${ list }" var="l">
-		<div class="card">
-			<div class="container">
-        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
-			<button type="submit" class="button4">Delete</button> </div>
-				<br>
-				<div class="header">Title: </div>
-				<div class="cardElements" style="text-align:center"> Contact Information:</div>
-				<div class="cardElements" style="text-align:center"> Quantity: ${ l.getQuantity() }</div></div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> City:</div>
-				<div class="cardElements" style="text-align:center"> County:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				
-				<br>
-        	    <button type="submit" class="button1">Accept</button>
-        		<button type="submit" class="button2">Decline</button>
+	<c:forEach items="${ list }" var="l" varStatus="theCount">
+		<div class="row">
+			<div class="card">
+				<div class="container">
+	        	
+	        		<div class="text-center"> 
+	        			<form action="<%=request.getContextPath()%>/edittingPost" method="post" >
+	        				<input type="hidden" name="donationId" value="${ l.getDonationId() }"/>
+	        				<input type="submit" class="button3" name="edit" value="Edit" />
+	        				<input type="submit" class="button4" name="delete" value="Delete" /> 
+						</form>
+						
+					</div>
+					<br>
+					<div class="header">Post <c:out value="${ theCount.count }"/></div>
+					<div class="cardElements" style="text-align:center"> Item(s): ${ l.getTitle() }</div>
+					<div class="cardElements" style="text-align:center"> Quantity: ${ l.getQuantity() }</div>
+					<div class="cardElements" style="text-align:center"> Category: ${ l.getTypeId() }</div>
+					<div class="cardElements" style="text-align:center"> 
+						<img src="${ l.getPicture() }" width="100px" height="100px" />
+					</div>
+					<br>
+	        	    <button type="submit" class="button1">Accept</button>
+	        		<button type="submit" class="button2">Decline</button>
+				</div>
 			</div>
-		</div>
-		</c:forEach>
 	</div>
+	</c:forEach>
 </body>
 
 <style>
@@ -87,7 +94,7 @@ body{
 	background-color: #501b1d;
 }
 
-img{
+.logo {
 	width: 4%;
 	height: 4%;
 	padding-top: 20px;

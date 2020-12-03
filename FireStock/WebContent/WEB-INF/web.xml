@@ -42,4 +42,31 @@
   	<servlet-name>RequestServlet</servlet-name>
   	<url-pattern>/request</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>NewPostServlet</servlet-name>
+  	<servlet-class>controller.NewPostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewPostServlet</servlet-name>
+  	<url-pattern>/newPost</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>EdittingPostServlet</servlet-name>
+  	<servlet-class>controller.EdittingPostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EdittingPostServlet</servlet-name>
+  	<url-pattern>/edittingPost</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>EditDonationServlet</servlet-name>
+  	<servlet-class>controller.EditDonationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EditDonationServlet</servlet-name>
+  	<url-pattern>/editDonation</url-pattern>
+  </servlet-mapping>
 </web-app>

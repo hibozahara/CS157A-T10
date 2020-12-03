@@ -9,52 +9,51 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RequestDao {
+public class CountyDao {
 
 	private static String jdbcURL = "jdbc:mysql://localhost:3306/firestock";
 	private static String dbUser = "root";
 	private static String dbPassword = "root";
 	
-	public int addRequest(int currentUserId, int donatorId) throws ClassNotFoundException {
-		String ADD_REQUEST = "INSERT IGNORE INTO request (userId, donationId, status) VALUES (?, ?, ?)";
+	public int getCountyIdByName(String countyName) throws ClassNotFoundException {
+		String GET_COUNTYID = "SELECT countyId FROM county WHERE countyName = ?";
 		Class.forName("com.mysql.jdbc.Driver");
-		int result = 0;
+		int id = 0;
 		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
 
-				PreparedStatement ps = connection.prepareStatement(ADD_REQUEST)) {
-			ps.setInt(1, currentUserId);
-			ps.setInt(2, donatorId);
-			ps.setString(3, "Pending");
-			result = ps.executeUpdate();
-			
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return result;
-	}
-	
-	public List<Integer> getRequestsByUserId(int userId) throws ClassNotFoundException {
-		String GET_REQUEST = "SELECT donationId FROM request WHERE userId = ?";
-		Class.forName("com.mysql.jdbc.Driver");
-		List<Integer> requests = new ArrayList<>();
-		int donationId = 0;
-		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
-
-				PreparedStatement ps = connection.prepareStatement(GET_REQUEST)) {
-			ps.setInt(1, userId);
+				PreparedStatement ps = connection.prepareStatement(GET_COUNTYID)) {
+			ps.setString(1, countyName);
 			ResultSet result = ps.executeQuery();
 			
-			while(result.next()) {
-				donationId = result.getInt("donationId");
-				requests.add(donationId);
+			if(result.next()) {
+				id = result.getInt("countyId");
 			}
 			
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return requests;
-		
+		return id;
+	}
+	
+	public String getCountyNameById(int countyId) throws ClassNotFoundException {
+		String GET_COUNTYNAME = "SELECT countyName FROM county WHERE countyId = ?";
+		Class.forName("com.mysql.jdbc.Driver");
+		String name = null;
+		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+
+				PreparedStatement ps = connection.prepareStatement(GET_COUNTYNAME)) {
+			ps.setInt(1, countyId);
+			ResultSet result = ps.executeQuery();
+			
+			if(result.next()) {
+				name = result.getString("countyName");
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return name;
 	}
 }

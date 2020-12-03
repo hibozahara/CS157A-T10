@@ -9,52 +9,51 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RequestDao {
+public class TypeDao {
 
 	private static String jdbcURL = "jdbc:mysql://localhost:3306/firestock";
 	private static String dbUser = "root";
 	private static String dbPassword = "root";
 	
-	public int addRequest(int currentUserId, int donatorId) throws ClassNotFoundException {
-		String ADD_REQUEST = "INSERT IGNORE INTO request (userId, donationId, status) VALUES (?, ?, ?)";
+	public int getTypeIdByName(String typeName) throws ClassNotFoundException {
+		String GET_TYPEID = "SELECT * FROM type WHERE typeName = ?";
 		Class.forName("com.mysql.jdbc.Driver");
-		int result = 0;
+		int id = 0;
 		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
 
-				PreparedStatement ps = connection.prepareStatement(ADD_REQUEST)) {
-			ps.setInt(1, currentUserId);
-			ps.setInt(2, donatorId);
-			ps.setString(3, "Pending");
-			result = ps.executeUpdate();
-			
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return result;
-	}
-	
-	public List<Integer> getRequestsByUserId(int userId) throws ClassNotFoundException {
-		String GET_REQUEST = "SELECT donationId FROM request WHERE userId = ?";
-		Class.forName("com.mysql.jdbc.Driver");
-		List<Integer> requests = new ArrayList<>();
-		int donationId = 0;
-		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
-
-				PreparedStatement ps = connection.prepareStatement(GET_REQUEST)) {
-			ps.setInt(1, userId);
+				PreparedStatement ps = connection.prepareStatement(GET_TYPEID)) {
+			ps.setString(1, typeName);
 			ResultSet result = ps.executeQuery();
 			
-			while(result.next()) {
-				donationId = result.getInt("donationId");
-				requests.add(donationId);
+			if(result.next()) {
+				id = result.getInt("typeId");
 			}
 			
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return requests;
-		
+		return id;
+	}
+	
+	public String getTypeNameById(int typeId) throws ClassNotFoundException {
+		String GET_TYPENAME = "SELECT typeName FROM type WHERE typeId = ?";
+		Class.forName("com.mysql.jdbc.Driver");
+		String name = null;
+		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+
+				PreparedStatement ps = connection.prepareStatement(GET_TYPENAME)) {
+			ps.setInt(1, typeId);
+			ResultSet result = ps.executeQuery();
+			
+			if(result.next()) {
+				name = result.getString("typeName");
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return name;
 	}
 }
