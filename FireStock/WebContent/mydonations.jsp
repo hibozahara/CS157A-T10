@@ -79,8 +79,10 @@ img{
 }
 
 .navbar-right{
+	display:table-cell;
 	float:right;
 	padding-right: 30px;
+	vertical-align:center;
 }
 
 .row{
@@ -132,9 +134,23 @@ img{
     text-align: center;
     font-weight: bold;
 
-  }
-  .button2 {
-      background-color: #990000;
+}
+
+.button2 {
+	 background-color: #990000;
+	 border-radius: 3px;
+	 border: none;
+	 color: #FFFFFF;
+	 cursor: pointer;
+	 display: inline-block;
+	 font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+	 font-size: 12px;
+	 padding: 10px 20px;
+	 text-align: center;
+	 font-weight: bold;
+}
+  .button3 {
+      background-color: #e68a00	;
       border-radius: 3px;
       border: none;
       color: #FFFFFF;
@@ -142,40 +158,36 @@ img{
       display: inline-block;
       font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
       font-size: 12px;
-      padding: 10px 20px;
+      padding: 5px 15px;
       text-align: center;
-      font-weight: bold;
-	
+	font-weight: bold;
+}
 
-    }
-    .button3 {
-        background-color: #e68a00	;
-        border-radius: 3px;
-        border: none;
-        color: #FFFFFF;
-        cursor: pointer;
-        display: inline-block;
-        font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 12px;
-        padding: 5px 15px;
-        text-align: center;
- 		font-weight: bold;
-      }
+.button4 {
+     background-color: #e68a00;
+     border-radius: 3px;
+     border: none;
+     color: #FFFFFF;
+     cursor: pointer;
+     display: inline-block;
+     font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+     font-size: 12px;
+     padding: 5px 15px;
+     text-align: center;
+     font-weight: bold;
 
-     .button4 {
-          background-color: #e68a00;
-          border-radius: 3px;
-          border: none;
-          color: #FFFFFF;
-          cursor: pointer;
-          display: inline-block;
-          font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
-          font-size: 12px;
-          padding: 5px 15px;
-          text-align: center;
-          font-weight: bold;
-
-        }
+}
+        
+.logoutbtn {
+	padding: 20px 5px;
+	margin-top: 8px;
+	margin-right: 30px;
+	background-color: #ffd966;
+	float: right;
+	width: 24%;
+	border-radius: 10px;
+	font-weight: bold;
+}
         
   .text-center {
   text-align: center;

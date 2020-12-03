@@ -130,6 +130,18 @@ h4{
     font-weight: bold;
 
   }
+  
+.logoutbtn {
+	padding: 20px 5px;
+	margin-top: 8px;
+	margin-right: 30px;
+	background-color: #ffd966;
+	float: right;
+	width: 24%;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
   .text-center {
   text-align: center;
 }
