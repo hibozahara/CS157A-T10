@@ -33,4 +33,13 @@
   	<servlet-name>UserLogoutServlet</servlet-name>
   	<url-pattern>/logout</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>RequestServlet</servlet-name>
+  	<servlet-class>controller.RequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RequestServlet</servlet-name>
+  	<url-pattern>/request</url-pattern>
+  </servlet-mapping>
 </web-app>
