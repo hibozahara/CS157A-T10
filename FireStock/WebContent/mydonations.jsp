@@ -35,38 +35,40 @@
 			<a href="postings.jsp">Donations</a>
 			<a href="mydonations.jsp">My Donations</a>
 			<a href="myrequests.jsp">My Request</a>
-			<a href="login.jsp">Logout</a>
+			<form action="<%= request.getContextPath() %>/logout" method="post">
+					<button type="submit" class="logoutbtn">Logout</button>
+			</form>
 		</div>
 	</div>
 	
 	<h3  style="text-align:center">Items You Donated:</h3>
-	
+
 	<div>
 		<input type="text" value="<%= session.getAttribute("email") %>" />
-		
 	</div>
 
 	<div class="row">
 		<c:forEach items="${ list }" var="l">
-			<div class="card">
-				<div class="container">
-	        	
-	        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
-				<button type="submit" class="button4">Delete</button> </div>
-					<br>
-					<div class="header">Post 1</div>
-					<div class="cardElements" style="text-align:center"> Item(s):</div>
-					<div class="cardElements" style="text-align:center"> Quantity: ${ l.getQuantity() }</div>
-					<div class="cardElements" style="text-align:center"> Category:</div>
-					<div class="cardElements" style="text-align:center"> Picture:</div>
-					<br>
-	        	    <button type="submit" class="button1">Accept</button>
-	        		<button type="submit" class="button2">Decline</button>
-				</div>
+		<div class="card">
+			<div class="container">
+        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
+			<button type="submit" class="button4">Delete</button> </div>
+				<br>
+				<div class="header">Title: </div>
+				<div class="cardElements" style="text-align:center"> Contact Information:</div>
+				<div class="cardElements" style="text-align:center"> Quantity: ${ l.getQuantity() }</div></div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				
+				<br>
+        	    <button type="submit" class="button1">Accept</button>
+        		<button type="submit" class="button2">Decline</button>
 			</div>
+		</div>
 		</c:forEach>
 	</div>
-	
 </body>
 
 <style>
@@ -103,8 +105,10 @@ img{
 }
 
 .navbar-right{
+	display:table-cell;
 	float:right;
 	padding-right: 30px;
+	vertical-align:center;
 }
 
 .row{
@@ -156,9 +160,23 @@ img{
     text-align: center;
     font-weight: bold;
 
-  }
-  .button2 {
-      background-color: #990000;
+}
+
+.button2 {
+	 background-color: #990000;
+	 border-radius: 3px;
+	 border: none;
+	 color: #FFFFFF;
+	 cursor: pointer;
+	 display: inline-block;
+	 font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+	 font-size: 12px;
+	 padding: 10px 20px;
+	 text-align: center;
+	 font-weight: bold;
+}
+  .button3 {
+      background-color: #e68a00	;
       border-radius: 3px;
       border: none;
       color: #FFFFFF;
@@ -166,40 +184,36 @@ img{
       display: inline-block;
       font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
       font-size: 12px;
-      padding: 10px 20px;
+      padding: 5px 15px;
       text-align: center;
-      font-weight: bold;
-	
+	font-weight: bold;
+}
 
-    }
-    .button3 {
-        background-color: #e68a00	;
-        border-radius: 3px;
-        border: none;
-        color: #FFFFFF;
-        cursor: pointer;
-        display: inline-block;
-        font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 12px;
-        padding: 5px 15px;
-        text-align: center;
- 		font-weight: bold;
-      }
+.button4 {
+     background-color: #e68a00;
+     border-radius: 3px;
+     border: none;
+     color: #FFFFFF;
+     cursor: pointer;
+     display: inline-block;
+     font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+     font-size: 12px;
+     padding: 5px 15px;
+     text-align: center;
+     font-weight: bold;
 
-     .button4 {
-          background-color: #e68a00;
-          border-radius: 3px;
-          border: none;
-          color: #FFFFFF;
-          cursor: pointer;
-          display: inline-block;
-          font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
-          font-size: 12px;
-          padding: 5px 15px;
-          text-align: center;
-          font-weight: bold;
-
-        }
+}
+        
+.logoutbtn {
+	padding: 20px 5px;
+	margin-top: 8px;
+	margin-right: 30px;
+	background-color: #ffd966;
+	float: right;
+	width: 24%;
+	border-radius: 10px;
+	font-weight: bold;
+}
         
   .text-center {
   text-align: center;

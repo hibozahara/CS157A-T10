@@ -41,34 +41,30 @@
 	<a href="newPost.jsp"><button type="submit" class="buttonupload">Upload A Donation</button></a>
 	
 	<h3  style="text-align:center">Donation Listings</h3>
-
-	<div>
-		<input type="text" value="<%= session.getAttribute("email") %>" />
-		
-	</div>
+	
+	<div><input type="text" value="<%= session.getAttribute("email") %>" /></div>
 	
 	<c:forEach items="${users}" var="u">
 		<div class="row">
 			<div class="card">
 				<div class="container">
 	        	<h4 style="text-align:center" >${u.getName()}</h4>
-					<div class="header">Post 1</div>
-					<div style="text-align:center"> ${ u.getEmail() }</div>
-					<div style="text-align:center"> Quantity:</div>
-					<div style="text-align:center"> Category:</div>
+					<div class="header">Title:</div>
+					<div class="cardElements" style="text-align:center"> ${ u.getEmail() }</div>
+					<div class="cardElements" style="text-align:center"> Quantity:</div>
+					<div class="cardElements" style="text-align:center"> Category:</div>
+					<div class="cardElements" style="text-align:center"> City:</div>
+					<div class="cardElements" style="text-align:center"> County:</div>
+					<div class="cardElements" style="text-align:center"> Picture:</div>
 					<br>
-					<div class="text-center">
-              <form action="<%= request.getContextPath() %>/request" method="post">
-                <input type="hidden" name="donationUserEmail" value="${ u.getEmail() }" />
-                <input type="submit" value="Request Now"></input> 
-              </form>	
-	        </div>
-					
+	         		 <form action="<%= request.getContextPath() %>/request" method="post">
+		                <input type="hidden" name="donationUserEmail" value="${ u.getEmail() }"/>
+		                <input type="submit" value="Request Now"></input> 
+	              </form>	
 				</div>
 			</div>
 		</div>
 	</c:forEach>
-
 </body>
 
 <style>
