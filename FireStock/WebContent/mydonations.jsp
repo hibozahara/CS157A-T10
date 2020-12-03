@@ -15,7 +15,9 @@
 			<a href="postings.jsp">Donations</a>
 			<a href="mydonations.jsp">My Donations</a>
 			<a href="myrequests.jsp">My Request</a>
-			<a href="login.jsp">Logout</a>
+			<form action="<%= request.getContextPath() %>/logout" method="post">
+					<button type="submit" class="logoutbtn">Logout</button>
+			</form>
 		</div>
 	</div>
 	
@@ -41,7 +43,6 @@
 			</div>
 		</div>
 	</div>
-	
 </body>
 
 <style>

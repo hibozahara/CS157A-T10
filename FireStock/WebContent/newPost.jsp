@@ -89,11 +89,8 @@
 			<label style="color: #ffd966;" for="contact"><b>Contact Information</b></label><br>
 			<input type="text" placeholder="Enter a phone number or email" name="contact" required><br>
 
-
 			<div class="signupbts">
-				<a href="#">
-					<button type="button" class="postbtn">Post Now</button>
-				</a>
+					<input type="submit" class="postbtn">
 			</div>
 		</div>
 	</form>
