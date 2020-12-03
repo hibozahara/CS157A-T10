@@ -28,6 +28,7 @@ public class RequestServlet extends HttpServlet {
 	
 	private RequestDao requestDao = new RequestDao();
 	private DonationDAO donationDao = new DonationDAO();
+	private UserDao userDao = new UserDao();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -52,12 +53,12 @@ public class RequestServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		String email = (String) session.getAttribute("email");
-		String donationUserEmail = request.getParameter("donationUserEmail");
+		String donationUserId = request.getParameter("donationUserId");
 		String destPage = "postings.jsp";
 		
 		try {
-			int currentUserId = UserDao.getUserIdByEmail(email);
-			int donatorId = UserDao.getUserIdByEmail(donationUserEmail);
+			int currentUserId = userDao.getUserIdByEmail(email);
+			int donatorId = Integer.parseInt(donationUserId);
 			
 			if(currentUserId == 0) {
 				String message = "Current user's Id could not be found";
@@ -75,6 +76,7 @@ public class RequestServlet extends HttpServlet {
 				String message = "Could not add into Request Table";
 				request.setAttribute("message",  message);
 			}
+			
 			
 		}
 		catch (ClassNotFoundException e ) {

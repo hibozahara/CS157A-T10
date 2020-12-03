@@ -4,6 +4,8 @@ public class Request {
 	private int userId;
 	private int donationId;
 	private String status;
+	private User user;
+	private Donation donation;
 
 	public int getUserId() {
 		return userId;
@@ -27,6 +29,22 @@ public class Request {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Donation getDonation() {
+		return donation;
+	}
+
+	public void setDonation(Donation donation) {
+		this.donation = donation;
 	}
 
 }

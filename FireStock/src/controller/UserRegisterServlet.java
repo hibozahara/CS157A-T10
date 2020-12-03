@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.UserDao;
 import model.User;
@@ -56,6 +57,9 @@ public class UserRegisterServlet extends HttpServlet {
 		user.setPassword(password);
 		
 		try {
+			HttpSession session = request.getSession();
+			session.setAttribute("user", user);
+			session.setAttribute("email", email);
 			userDao.registerUser(user);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

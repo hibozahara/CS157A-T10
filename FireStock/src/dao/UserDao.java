@@ -100,7 +100,7 @@ public class UserDao {
 		return salt;
 	}
 
-	public static User getUserNameById(int userId) throws ClassNotFoundException {
+	public User getUserById(int userId) throws ClassNotFoundException {
 
 		String GET_USER_NAME = "SELECT * FROM user WHERE userId = ?";
 		Class.forName("com.mysql.jdbc.Driver");
@@ -124,7 +124,27 @@ public class UserDao {
 		return user;
 	}
 	
-	public static int getUserIdByEmail(String email) throws ClassNotFoundException {
+	public String getUserNameById(int userId) throws ClassNotFoundException {
+
+		String GET_USER_NAME = "SELECT name FROM user WHERE userId = ?";
+		Class.forName("com.mysql.jdbc.Driver");
+		String name = null;
+		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+
+				PreparedStatement ps = connection.prepareStatement(GET_USER_NAME)) {
+			ps.setInt(1, userId);
+			ResultSet result = ps.executeQuery();
+
+			if (result.next()) {
+				name = result.getString("name");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return name;
+	}
+	
+	public int getUserIdByEmail(String email) throws ClassNotFoundException {
 		String GET_USERID = "SELECT userId FROM user WHERE email = ?";
 		Class.forName("com.mysql.jdbc.Driver");
 		int userId = 0;

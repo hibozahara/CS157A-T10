@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="java.sql.DriverManager"%>
+<%@ page import="model.Donation, dao.DonationDAO, model.User, dao.UserDao, model.Request, dao.RequestDao, java.util.*" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -9,8 +12,26 @@
 </head>
 
 <body>
+
+	<%
+	UserDao userDao = new UserDao();
+	RequestDao requestDao = new RequestDao();
+	String email = (String) session.getAttribute("email");
+	int userId = userDao.getUserIdByEmail(email);
+	List<Integer> requestedDonationId = requestDao.getRequestsByUserId(userId);
+	List<Donation> list = new ArrayList<>();
+	for(int i = 0; i < requestedDonationId.size(); i++) {
+		Donation d = DonationDAO.getDonationByDonationId(requestedDonationId.get(i));
+		
+		list.add(d);
+	}
+	String name = userDao.getUserNameById(userId);
+	request.setAttribute("list", list);
+	
+
+	%>
 	<div class="navbar">
-		<img src="images/testlogo.png" alt="">
+		<img class="logo" src="images/testlogo.png" alt="">
 		<div class="navbar-right">
 			<a href="postings.jsp">Donations</a>
 			<a href="mydonations.jsp">My Donations</a>
@@ -20,7 +41,28 @@
 	</div>
 	<h3  style="text-align:center">Items You Requested:</h3>
 
-	<div class="row">
+	<c:forEach items="${ list }" var="l">
+		<div class="row">
+			<div class="card">
+				<div class="container">
+				<h4 style="text-align:center" >user's name</h4>
+					<div class="header">${ l.getTitle() }</div>
+					<div class="cardElements" style="text-align:center"> Contact Information: ${ l.getContact() }</div>
+					<div class="cardElements" style="text-align:center"> Quantity: ${ l.getQuantity() }</div>
+					<div class="cardElements" style="text-align:center"> Category: ${ l.getTypeId() }</div>
+					<div class="cardElements" style="text-align:center"> City: ${ l.getCityId() }</div>
+					<div class="cardElements" style="text-align:center"> County: ${ l.getCountyId() }</div>
+					<div class="cardElements" style="text-align:center"> 
+						<img width="100px" height="100px" src="${ l.getPicture() }" alt="" />
+					</div>
+					<br>
+	         		<div class="text-center"><button type="submit" class="button1">Status</button></div>
+				</div>
+			</div>
+		</div>
+	</c:forEach>
+	
+	<!-- <div class="row">
 		<div class="card">
 			<div class="container">
 			<h4 style="text-align:center" >user's name</h4>
@@ -86,24 +128,7 @@
          		<div class="text-center"><button type="submit" class="button1">Status</button></div>
 			</div>
 		</div>
-	</div>
-	
-	<div class="row">
-		<div class="card">
-			<div class="container">
-			<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Title</div>
-				<div class="cardElements" style="text-align:center"> Contact Information:</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> City:</div>
-				<div class="cardElements" style="text-align:center"> County:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<div class="text-center"><button type="submit" class="button1">Status</button></div>
-			</div>
-		</div>
-	</div>
+	</div> -->
 
 </body>
 
@@ -123,7 +148,7 @@ body{
 	background-color: #501b1d;
 }
 
-img{
+.logo {
 	width: 4%;
 	height: 4%;
 	padding-top: 20px;
