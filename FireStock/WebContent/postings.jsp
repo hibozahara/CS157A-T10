@@ -11,7 +11,6 @@
 <body>
 
 	<div class="navbar">
-		<a href="#">Logo</a>
 		<div class="navbar-right">
 			<a href="postings.jsp">Donations</a>
 			<a href="mydonations.jsp">My Donations</a>
@@ -31,9 +30,9 @@
 			<div class="container">
         	<h4 style="text-align:center" >user's name</h4>
 				<div class="header">Title</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
@@ -43,9 +42,9 @@
 			<div class="container">
         		<h4 style="text-align:center" >user's name</h4>
 				<div class="header">Title</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
@@ -55,9 +54,9 @@
 			<div class="container">
         		<h4 style="text-align:center" >user's name</h4>
 				<div class="header">Title</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
@@ -67,9 +66,9 @@
 			<div class="container">
         		<h4 style="text-align:center" >user's name</h4>
 				<div class="header">Title</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
@@ -109,16 +108,20 @@ body{
 	padding-right: 30px;
 }
 
+.row{
+	width: 50%;
+	margin: 0 auto;
+}
+
 .card{
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   	transition: 0.3s;
-  	width: 25%;
   	display: flex;
+  	/*width: 50%;*/
   	justify-content: center;
   	align-self:center;
   	margin-top: 50px;
-	margin-left: 25px;
-	background-color: #0059b3;
+	background-color: #501b1d;
 
 }
 
@@ -131,9 +134,16 @@ body{
 }
 
 .header{
-	
 	color: #ffffff;
 	text-align: center;
+}
+
+h4{
+	color: #ffd966;
+}
+
+.cardElements{
+	color: #FFFFFF;
 }
 
 button {
@@ -174,7 +184,7 @@ button {
   }
     
 .buttonupload {
-    background-color: #1A237E;
+    background-color: #501b1d;
     border-radius: 10px;
     border: none;
     color: #FFFFFF;
@@ -188,7 +198,7 @@ button {
     position: absolute; 
     right: 0;
     font-weight: bold;
-    width: 20%;
+    width: 10%;
   }
       
 .logoutbtn {
