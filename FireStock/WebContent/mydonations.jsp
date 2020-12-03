@@ -24,69 +24,108 @@
 	<div class="row">
 		<div class="card">
 			<div class="container">
-        	
         	<div class="text-center"> <button type="submit" class="button3">Edit</button>
 			<button type="submit" class="button4">Delete</button> </div>
 				<br>
-				<div class="header">Post 1</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="header">Title: </div>
+				<div class="cardElements" style="text-align:center"> Contact Information:</div>
 				<div class="cardElements" style="text-align:center"> Quantity:</div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
 				<div class="cardElements" style="text-align:center"> Picture:</div>
+				
 				<br>
         	    <button type="submit" class="button1">Accept</button>
         		<button type="submit" class="button2">Decline</button>
 			</div>
 		</div>
-
+	</div>
+	
+	<div class="row">
 		<div class="card">
 			<div class="container">
         	<div class="text-center"> <button type="submit" class="button3">Edit</button>
-				<button type="submit" class="button4">Delete</button> </div>
+			<button type="submit" class="button4">Delete</button> </div>
 				<br>
-				<div class="header">Post 2</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="header">Title: </div>
+				<div class="cardElements" style="text-align:center"> Contact Information:</div>
 				<div class="cardElements" style="text-align:center"> Quantity:</div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
 				<div class="cardElements" style="text-align:center"> Picture:</div>
+				
 				<br>
-         		<button type="submit" class="button1">Accept</button>
+        	    <button type="submit" class="button1">Accept</button>
         		<button type="submit" class="button2">Decline</button>
-			</div>
-		</div>
-		
-		<div class="card">
-			<div class="container">
-        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
-				<button type="submit" class="button4">Delete</button> </div>
-				<br>
-				<div class="header">Post 3</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<button type="submit" class="button1">Accept</button>
-        		<button type="submit" class="button2">Decline</button>
-			</div>
-		</div>
-		
-		<div class="card">
-			<div class="container">
-        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
-				<button type="submit" class="button4">Delete</button> </div>
-				<br>
-				<div class="header">Post 4</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<button type="submit" class="button1">Accept</button>
-       			<button type="submit" class="button2">Decline</button>
 			</div>
 		</div>
 	</div>
+	
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
+			<button type="submit" class="button4">Delete</button> </div>
+				<br>
+				<div class="header">Title: </div>
+				<div class="cardElements" style="text-align:center"> Contact Information:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				
+				<br>
+        	    <button type="submit" class="button1">Accept</button>
+        		<button type="submit" class="button2">Decline</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
+			<button type="submit" class="button4">Delete</button> </div>
+				<br>
+				<div class="header">Title: </div>
+				<div class="cardElements" style="text-align:center"> Contact Information:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				
+				<br>
+        	    <button type="submit" class="button1">Accept</button>
+        		<button type="submit" class="button2">Decline</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
+			<button type="submit" class="button4">Delete</button> </div>
+				<br>
+				<div class="header">Title: </div>
+				<div class="cardElements" style="text-align:center"> Contact Information:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				
+				<br>
+        	    <button type="submit" class="button1">Accept</button>
+        		<button type="submit" class="button2">Decline</button>
+			</div>
+		</div>
+	</div>
+	
 </body>
 
 <style>

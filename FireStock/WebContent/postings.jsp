@@ -30,49 +30,331 @@
 		<div class="card">
 			<div class="container">
         	<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Title</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="header">Title:</div>
 				<div class="cardElements" style="text-align:center"> Quantity:</div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
 				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
 		</div>
-
-		<div class="card">
-			<div class="container">
-        		<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Title</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
-			</div>
-		</div>
+	</div>
 		
+	<div class="row">
 		<div class="card">
 			<div class="container">
-        		<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Title</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
 				<div class="cardElements" style="text-align:center"> Quantity:</div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
 				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
 		</div>
+	</div>
 		
+	<div class="row">
 		<div class="card">
 			<div class="container">
-        		<h4 style="text-align:center" >user's name</h4>
-				<div class="header">Title</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
 				<div class="cardElements" style="text-align:center"> Quantity:</div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
+				<br>
+         		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="card">
+			<div class="container">
+        	<h4 style="text-align:center" >user's name</h4>
+				<div class="header">Title:</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> City:</div>
+				<div class="cardElements" style="text-align:center"> County:</div>
 				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
