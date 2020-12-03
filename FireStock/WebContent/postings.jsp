@@ -11,6 +11,7 @@
 <body>
 
 	<div class="navbar">
+		<img src="images/testlogo.png" alt="">
 		<div class="navbar-right">
 			<a href="postings.jsp">Donations</a>
 			<a href="mydonations.jsp">My Donations</a>
@@ -91,6 +92,13 @@ body{
 .navbar {
 	overflow: hidden;
 	background-color: #501b1d;
+}
+
+img{
+	width: 4%;
+	height: 4%;
+	padding-top: 20px;
+	padding-left: 20px;
 }
 
 .navbar a{
