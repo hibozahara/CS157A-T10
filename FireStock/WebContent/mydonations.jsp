@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="java.sql.DriverManager"%>
+<%@ page import="model.Donation, dao.DonationDAO, model.User, dao.UserDao, java.util.*" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -9,6 +12,23 @@
 </head>
 
 <body>
+
+	<%
+// 	List<Donation> list = DonationDAO.getAllDonations();
+// 	List<User> users = new ArrayList<>();
+// 	request.setAttribute("list", list);
+// 	for(int i = 0; i < list.size(); i++) {
+// 		int userId = list.get(i).getUserId();
+// 		users.add(UserDao.getUserNameById(userId));
+// 	}
+// 	request.setAttribute("users", users);
+	String email = (String) session.getAttribute("email");
+	int userId = UserDao.getUserIdByEmail(email);
+	List<Donation> list = DonationDAO.getUsersAllDonations(userId);
+	request.setAttribute("list", list);
+
+	%>
+
 	<div class="navbar">
 		<img src="images/testlogo.png" alt="">
 		<div class="navbar-right">
@@ -23,7 +43,12 @@
 	
 	<h3  style="text-align:center">Items You Donated:</h3>
 
+	<div>
+		<input type="text" value="<%= session.getAttribute("email") %>" />
+	</div>
+
 	<div class="row">
+		<c:forEach items="${ list }" var="l">
 		<div class="card">
 			<div class="container">
         	<div class="text-center"> <button type="submit" class="button3">Edit</button>
@@ -31,7 +56,7 @@
 				<br>
 				<div class="header">Title: </div>
 				<div class="cardElements" style="text-align:center"> Contact Information:</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Quantity: ${ l.getQuantity() }</div></div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
 				<div class="cardElements" style="text-align:center"> City:</div>
 				<div class="cardElements" style="text-align:center"> County:</div>
@@ -42,6 +67,7 @@
         		<button type="submit" class="button2">Decline</button>
 			</div>
 		</div>
+		</c:forEach>
 	</div>
 </body>
 
