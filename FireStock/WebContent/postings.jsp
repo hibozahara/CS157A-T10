@@ -41,7 +41,7 @@
 	<a href="newPost.jsp"><button type="submit" class="buttonupload">Upload A Donation</button></a>
 	
 	<h3  style="text-align:center">Donation Listings</h3>
-	
+
 	<div>
 		<input type="text" value="<%= session.getAttribute("email") %>" />
 		
@@ -58,11 +58,11 @@
 					<div style="text-align:center"> Category:</div>
 					<br>
 					<div class="text-center">
-		         		<form action="<%= request.getContextPath() %>/request" method="post">
-		         			<input type="hidden" name="donationUserEmail" value="${ u.getEmail() }" />
-							<input type="submit" value="Request Now"></input> 
-						</form>	
-	         		</div>
+              <form action="<%= request.getContextPath() %>/request" method="post">
+                <input type="hidden" name="donationUserEmail" value="${ u.getEmail() }" />
+                <input type="submit" value="Request Now"></input> 
+              </form>	
+	        </div>
 					
 				</div>
 			</div>

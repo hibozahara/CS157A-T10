@@ -34,10 +34,13 @@
 			
 			<label style="color: #ffd966;" for="picture"><b>Picture</b></label><br>
 			<input type="text" placeholder="Enter a image url" name="picture" required><br>
+			
+			<label style="color: #ffd966;" for="contact"><b>Contact Information</b></label><br>
+			<input type="text" placeholder="Enter a phone number or email" name="contact" required><br>
 
 
 			<div class="signupbts">
-				<a href="home.jsp">
+				<a href="postings.jsp">
 					<button type="button" class="postbtn">Post Now</button>
 				</a>
 			</div>

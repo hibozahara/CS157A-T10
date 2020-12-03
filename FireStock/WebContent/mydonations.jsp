@@ -65,55 +65,8 @@
 				</div>
 			</div>
 		</c:forEach>
-
-		<!-- <div class="card">
-			<div class="container">
-        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
-				<button type="submit" class="button4">Delete</button> </div>
-				<br>
-				<div class="header">Post 2</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<button type="submit" class="button1">Accept</button>
-        		<button type="submit" class="button2">Decline</button>
-			</div>
-		</div>
-		
-		<div class="card">
-			<div class="container">
-        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
-				<button type="submit" class="button4">Delete</button> </div>
-				<br>
-				<div class="header">Post 3</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<button type="submit" class="button1">Accept</button>
-        		<button type="submit" class="button2">Decline</button>
-			</div>
-		</div>
-		
-		<div class="card">
-			<div class="container">
-        	<div class="text-center"> <button type="submit" class="button3">Edit</button>
-				<button type="submit" class="button4">Delete</button> </div>
-				<br>
-				<div class="header">Post 4</div>
-				<div class="cardElements" style="text-align:center"> Item(s):</div>
-				<div class="cardElements" style="text-align:center"> Quantity:</div>
-				<div class="cardElements" style="text-align:center"> Category:</div>
-				<div class="cardElements" style="text-align:center"> Picture:</div>
-				<br>
-         		<button type="submit" class="button1">Accept</button>
-       			<button type="submit" class="button2">Decline</button>
-			</div>
-		</div> -->
 	</div>
+	
 </body>
 
 <style>
