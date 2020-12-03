@@ -91,7 +91,7 @@
 
 
 			<div class="signupbts">
-				<a href="postings.jsp">
+				<a href="#">
 					<button type="button" class="postbtn">Post Now</button>
 				</a>
 			</div>
