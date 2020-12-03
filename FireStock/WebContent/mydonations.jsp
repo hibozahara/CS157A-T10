@@ -10,7 +10,7 @@
 
 <body>
 	<div class="navbar">
-		<a href="#">Logo</a>
+		<img src="images/testlogo.png" alt="">
 		<div class="navbar-right">
 			<a href="postings.jsp">Donations</a>
 			<a href="mydonations.jsp">My Donations</a>
@@ -29,9 +29,10 @@
 			<button type="submit" class="button4">Delete</button> </div>
 				<br>
 				<div class="header">Post 1</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
         	    <button type="submit" class="button1">Accept</button>
         		<button type="submit" class="button2">Decline</button>
@@ -44,9 +45,10 @@
 				<button type="submit" class="button4">Delete</button> </div>
 				<br>
 				<div class="header">Post 2</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<button type="submit" class="button1">Accept</button>
         		<button type="submit" class="button2">Decline</button>
@@ -59,9 +61,10 @@
 				<button type="submit" class="button4">Delete</button> </div>
 				<br>
 				<div class="header">Post 3</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<button type="submit" class="button1">Accept</button>
         		<button type="submit" class="button2">Decline</button>
@@ -74,9 +77,10 @@
 				<button type="submit" class="button4">Delete</button> </div>
 				<br>
 				<div class="header">Post 4</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<button type="submit" class="button1">Accept</button>
        			<button type="submit" class="button2">Decline</button>
@@ -101,6 +105,13 @@ body{
 	background-color: #501b1d;
 }
 
+img{
+	width: 4%;
+	height: 4%;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
 .navbar a{
 	float:left;
 	text-align: center;
@@ -116,17 +127,21 @@ body{
 	padding-right: 30px;
 }
 
+.row{
+	width: 50%;
+	margin: 0 auto;
+}
+
 .card{
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   	transition: 0.3s;
-  	width: 25%;
   	display: flex;
   	justify-content: center;
   	align-self:center;
   	margin-top: 50px;
 	margin-left: 25px;
 	margin-bottom: 5px;
-	background-color: #0059b3;
+	background-color: #501b1d;
 
 }
 
@@ -142,6 +157,10 @@ body{
 	
 	color: #ffffff;
 	text-align: center;
+}
+
+.cardElements{
+	color: #FFFFFF;
 }
 
 .button1 {

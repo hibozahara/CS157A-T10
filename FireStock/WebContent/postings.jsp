@@ -34,6 +34,7 @@
 				<div class="cardElements" style="text-align:center"> Item(s):</div>
 				<div class="cardElements" style="text-align:center"> Quantity:</div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
@@ -46,6 +47,7 @@
 				<div class="cardElements" style="text-align:center"> Item(s):</div>
 				<div class="cardElements" style="text-align:center"> Quantity:</div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
@@ -58,6 +60,7 @@
 				<div class="cardElements" style="text-align:center"> Item(s):</div>
 				<div class="cardElements" style="text-align:center"> Quantity:</div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
@@ -70,6 +73,7 @@
 				<div class="cardElements" style="text-align:center"> Item(s):</div>
 				<div class="cardElements" style="text-align:center"> Quantity:</div>
 				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Request Now</button> </div>
 			</div>
@@ -125,7 +129,6 @@ img{
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   	transition: 0.3s;
   	display: flex;
-  	/*width: 50%;*/
   	justify-content: center;
   	align-self:center;
   	margin-top: 50px;

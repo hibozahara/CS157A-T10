@@ -10,7 +10,7 @@
 
 <body>
 	<div class="navbar">
-		<a href="#">Logo</a>
+		<img src="images/testlogo.png" alt="">
 		<div class="navbar-right">
 			<a href="postings.jsp">Donations</a>
 			<a href="mydonations.jsp">My Donations</a>
@@ -23,10 +23,12 @@
 	<div class="row">
 		<div class="card">
 			<div class="container">
+			<h4 style="text-align:center" >user's name</h4>
 				<div class="header">Request 1</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
          		<div class="text-center"><button type="submit" class="button1">Status</button></div>
       
@@ -35,30 +37,36 @@
 
 		<div class="card">
 			<div class="container">
+			<h4 style="text-align:center" >user's name</h4>
 				<div class="header">Request 2</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
 				<div class="text-center"><button type="submit" class="button1">Status</button></div>
 			</div>
 		</div>
 		<div class="card">
 			<div class="container">
+			<h4 style="text-align:center" >user's name</h4>
 				<div class="header">Request 3</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
 				<div class="text-center"><button type="submit" class="button1">Status</button></div>
 			</div>
 		</div>
 		<div class="card">
 			<div class="container">
+			<h4 style="text-align:center" >user's name</h4>
 				<div class="header">Request 4</div>
-				<div style="text-align:center"> Item(s):</div>
-				<div style="text-align:center"> Quantity:</div>
-				<div style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Item(s):</div>
+				<div class="cardElements" style="text-align:center"> Quantity:</div>
+				<div class="cardElements" style="text-align:center"> Category:</div>
+				<div class="cardElements" style="text-align:center"> Picture:</div>
 				<br>
 				<div class="text-center"><button type="submit" class="button1">Status</button></div>
 			</div>
@@ -84,6 +92,13 @@ body{
 	background-color: #501b1d;
 }
 
+img{
+	width: 4%;
+	height: 4%;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
 .navbar a{
 	float:left;
 	text-align: center;
@@ -99,16 +114,20 @@ body{
 	padding-right: 30px;
 }
 
+.row{
+	width: 50%;
+	margin: 0 auto;
+}
+
 .card{
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   	transition: 0.3s;
-  	width: 25%;
   	display: flex;
   	justify-content: center;
   	align-self:center;
   	margin-top: 50px;
 	margin-left: 25px;
-	background-color: #0059b3;
+	background-color: #501b1d;
 
 }
 
@@ -124,6 +143,14 @@ body{
 	
 	color: #ffffff;
 	text-align: center;
+}
+
+h4{
+	color: #ffd966;
+}
+
+.cardElements{
+	color: #FFFFFF;
 }
 
 .button1 {
