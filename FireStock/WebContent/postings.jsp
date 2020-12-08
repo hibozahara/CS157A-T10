@@ -39,6 +39,12 @@
 		</div>
 	</div>
 	
+	<form action="">
+		<label for="search"><b>Search</b></label><br>
+		<input type="text" placeholder="Enter Search String: " name="search" ><br>
+	</form>
+	
+	
 	<a href="newPost.jsp"><button type="submit" class="buttonupload">Upload A Donation</button></a>
 	
 	<h3  style="text-align:center">Donation Listings</h3>
