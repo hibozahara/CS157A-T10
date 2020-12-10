@@ -55,6 +55,44 @@ public class RequestDao {
 			e.printStackTrace();
 		}
 		return requests;
+	}
+	
+	public void updateRequestToDeclineByDonationId(int donationId, int userId) throws ClassNotFoundException {
+		String UPDATE_QUERY = "UPDATE request SET status = 'Declined' WHERE donationId = ? AND userId = ?";
+		Class.forName("com.mysql.jdbc.Driver");
 		
+		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+
+				PreparedStatement ps = connection.prepareStatement(UPDATE_QUERY)) {
+			
+			ps.setInt(1, donationId);
+			ps.setInt(2, userId);
+			ps.execute();
+			
+			ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void updateRequestToAcceptByDonationId(int donationId, int userId) throws ClassNotFoundException {
+		String UPDATE_QUERY = "UPDATE request SET status = 'Accepted' WHERE donationId = ? AND userId = ?";
+		Class.forName("com.mysql.jdbc.Driver");
+		
+		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+
+				PreparedStatement ps = connection.prepareStatement(UPDATE_QUERY)) {
+			
+			ps.setInt(1, donationId);
+			ps.setInt(2, userId);
+			ps.execute();
+			
+			ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }

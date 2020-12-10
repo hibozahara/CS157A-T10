@@ -69,4 +69,13 @@
   	<servlet-name>EditDonationServlet</servlet-name>
   	<url-pattern>/editDonation</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UpdateDonationServlet</servlet-name>
+  	<servlet-class>controller.UpdateDonationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdateDonationServlet</servlet-name>
+  	<url-pattern>/updateDonation</url-pattern>
+  </servlet-mapping>
 </web-app>

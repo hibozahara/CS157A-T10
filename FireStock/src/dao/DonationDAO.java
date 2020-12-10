@@ -21,7 +21,7 @@ public class DonationDAO {
 	
 	public static List<Donation> getDonations() throws ClassNotFoundException {
 		List<Donation> list = new ArrayList<Donation>();
-		String QUERY_DONATIONS_SQL = "SELECT * FROM donation";
+		String QUERY_DONATIONS_SQL = "SELECT * FROM donation JOIN type USING (typeId) JOIN county USING (countyId) JOIN city USING (cityId)";
 		Class.forName("com.mysql.jdbc.Driver");
 		try (Connection connection = DriverManager
 				.getConnection(jdbcURL, dbUser, dbPassword);
@@ -40,6 +40,9 @@ public class DonationDAO {
 				d.setQuantity(rs.getInt("quantity"));
 				d.setPicture(rs.getString("picture"));
 				d.setContact(rs.getString("contactInfo"));
+				d.setTypeName(rs.getString("typeName"));
+				d.setCountyName(rs.getString("countyName"));
+				d.setCityName(rs.getString("cityName"));
 				list.add(d);
 				
 			}
@@ -75,7 +78,8 @@ public class DonationDAO {
 	
 	public static Donation getDonationByDonationId(int donationId) throws ClassNotFoundException {
 //		List<Donation> list = new ArrayList<Donation>();
-		String GET_A_DONATION_BY_DONATION_ID = "SELECT * FROM donation WHERE donationId = ?";
+		String GET_A_DONATION_BY_DONATION_ID = "SELECT * FROM donation JOIN type USING (typeId) JOIN county USING (countyId) "
+				+ "JOIN city USING (cityId) JOIN user USING (userId) JOIN request USING (donationId) WHERE donationId = ?";
 		Class.forName("com.mysql.jdbc.Driver");
 		Donation d = new Donation();
 		try (Connection connection = DriverManager
@@ -85,22 +89,11 @@ public class DonationDAO {
  		{
 			ps.setInt(1, donationId);
 			ResultSet rs = ps.executeQuery();
-//			while(rs.next()) {
-//				Donation d = new Donation();
-//				d.setUserId(rs.getInt("userId"));
-//				d.setTitle(rs.getString("title"));
-//				d.setTypeId(rs.getInt("typeId"));
-//				d.setCountyId(rs.getInt("countyId"));
-//				d.setCityId(rs.getInt("cityId"));
-//				d.setQuantity(rs.getInt("quantity"));
-//				d.setPicture(rs.getString("picture"));
-//				d.setContact(rs.getString("contactInfo"));
-//				list.add(d);
-//			}
 			
 			if(rs.next()) {
+				
 				d.setDonationId(rs.getInt("donationId"));
-				d.setUserId(rs.getInt(rs.getInt("userId")));
+				d.setUserId(rs.getInt("userId"));
 				d.setTitle(rs.getString("title"));
 				d.setTypeId(rs.getInt("typeId"));
 				d.setCountyId(rs.getInt("countyId"));
@@ -108,6 +101,13 @@ public class DonationDAO {
 				d.setQuantity(rs.getInt("quantity"));
 				d.setPicture(rs.getString("picture"));
 				d.setContact(rs.getString("contactInfo"));
+				d.setTypeName(rs.getString("typeName"));
+				d.setCountyName(rs.getString("countyName"));
+				d.setCityName(rs.getString("cityName"));
+				d.setName(rs.getString("name"));
+				d.setStatus(rs.getString("status"));
+				
+				return d;
 			}
 		}
 		catch (SQLException e){
@@ -118,7 +118,9 @@ public class DonationDAO {
 	
 	public static List<Donation> getUsersAllDonations(int userId) throws ClassNotFoundException {
 		List<Donation> list = new ArrayList<Donation>();
-		String GET_USERS_DONATIONS = "SELECT * FROM donation WHERE userId = ?";
+//		String GET_USERS_DONATIONS = "SELECT * FROM donation WHERE userId = ?";
+		String GET_USERS_DONATIONS = "select * from donation JOIN (SELECT userId AS requestingUserId, donationId, status FROM request) r "
+				+ "USING (donationId) JOIN type USING (typeId) WHERE userId = ?";
 		Class.forName("com.mysql.jdbc.Driver");
 		try (Connection connection = DriverManager
 				.getConnection(jdbcURL, dbUser, dbPassword);
@@ -138,6 +140,8 @@ public class DonationDAO {
 				d.setQuantity(rs.getInt("quantity"));
 				d.setPicture(rs.getString("picture"));
 				d.setContact(rs.getString("contactInfo"));
+				d.setRequestingUserId(rs.getInt("requestingUserId"));
+				d.setTypeName(rs.getString("typeName"));
 				list.add(d);
 				
 			}

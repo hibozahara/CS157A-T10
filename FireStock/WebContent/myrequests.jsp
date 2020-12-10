@@ -47,18 +47,18 @@
 		<div class="row">
 			<div class="card">
 				<div class="container">
-				<h4 style="text-align:center" >user's name</h4>
+				<h4 style="text-align:center" >${ l.getName() }</h4>
 					<div class="header">${ l.getTitle() }</div>
 					<div class="cardElements" style="text-align:center"> Contact Information: ${ l.getContact() }</div>
 					<div class="cardElements" style="text-align:center"> Quantity: ${ l.getQuantity() }</div>
-					<div class="cardElements" style="text-align:center"> Category: ${ l.getTypeId() }</div>
-					<div class="cardElements" style="text-align:center"> City: ${ l.getCityId() }</div>
-					<div class="cardElements" style="text-align:center"> County: ${ l.getCountyId() }</div>
+					<div class="cardElements" style="text-align:center"> Category: ${ l.getTypeName() }</div>
+					<div class="cardElements" style="text-align:center"> City: ${ l.getCityName() }</div>
+					<div class="cardElements" style="text-align:center"> County: ${ l.getCountyName() }</div>
 					<div class="cardElements" style="text-align:center"> 
 						<img width="100px" height="100px" src="${ l.getPicture() }" alt="" />
 					</div>
 					<br>
-	         		<div class="text-center"><button type="submit" class="button1">Status</button></div>
+	         		<div class="text-center"><button type="submit" class="button1">${ l.getStatus() }</button></div>
 				</div>
 			</div>
 		</div>
@@ -166,6 +166,7 @@ h4{
 	width: 24%;
 	border-radius: 10px;
 	font-weight: bold;
+	margin-bottom: 10px;
 }
 
   .text-center {

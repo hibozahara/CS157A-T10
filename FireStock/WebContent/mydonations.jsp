@@ -44,9 +44,6 @@
 	
 	<h3  style="text-align:center">Items You Donated:</h3>
 
-	<div>
-		<input type="text" value="<%= session.getAttribute("email") %>" />
-	</div>
 
 	<c:forEach items="${ list }" var="l" varStatus="theCount">
 		<div class="row">
@@ -65,13 +62,21 @@
 					<div class="header">Post <c:out value="${ theCount.count }"/></div>
 					<div class="cardElements" style="text-align:center"> Item(s): ${ l.getTitle() }</div>
 					<div class="cardElements" style="text-align:center"> Quantity: ${ l.getQuantity() }</div>
-					<div class="cardElements" style="text-align:center"> Category: ${ l.getTypeId() }</div>
+					<div class="cardElements" style="text-align:center"> Category: ${ l.getTypeName() }</div>
 					<div class="cardElements" style="text-align:center"> 
 						<img src="${ l.getPicture() }" width="100px" height="100px" />
 					</div>
 					<br>
-	        	    <button type="submit" class="button1">Accept</button>
-	        		<button type="submit" class="button2">Decline</button>
+					
+					<form action="<%= request.getContextPath() %>/updateDonation" method="post">
+						<input type="hidden" name="donationId" value="${ l.getDonationId() }"/>
+						<input type="hidden" name="requestingUserId" value="${ l.getRequestingUserId() }"/>
+						<input type="submit" class="button3" name="Accept" value="Accept" />
+	        			<input type="submit" class="button4" name="Decline" value="Decline" /> 
+						<!-- <button type="submit" class="button1">Accept</button>
+	        			<button type="submit" class="button2">Decline</button> -->
+					</form>
+	        	    
 				</div>
 			</div>
 	</div>
@@ -220,6 +225,7 @@ body{
 	width: 24%;
 	border-radius: 10px;
 	font-weight: bold;
+	margin-bottom: 10px;
 }
         
   .text-center {
