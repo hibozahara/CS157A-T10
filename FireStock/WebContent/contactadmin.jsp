@@ -9,23 +9,23 @@
 </head>
 
 <body>
-	<form action="mailto:someone@example.com" method="post"style="border: 3px solid #fca652">
+	<form action="mailto:someone@example.com" method="post"
+		style="border: 3px solid #fca652">
 		<div class="container" id="form">
 			<h1 style="color: #ffd966;">Contact Us</h1>
 			<a href="home.jsp"><button type="button" class="loginbtn">Back</button></a>
-			<p style="color: #ffd966;"><b> The Team will respond to you within 3-5 business days.</b></p>
+			<p style="color: #ffd966;">
+				<b> The Team will respond to you within 3-5 business days.</b>
+			</p>
 			<hr>
 
 			<label style="color: #ffd966;" for="name"><b>Your Name</b></label> <br>
 			<input type="text" placeholder="Enter Your Name" name="name" required>
-			<br>
-
-			<label style="color: #ffd966;" for="email"><b>Email</b></label> <br>
-			<input type="text" placeholder="Enter Email " name="email" required><br>
-
-			<label style="color: #ffd966;" for="message"><b>Message</b></label><br>
-			<input type="text" placeholder="Enter Message Here" name="message" required>
-			<br>
+			<br> <label style="color: #ffd966;" for="email"><b>Email</b></label>
+			<br> <input type="text" placeholder="Enter Email " name="email"
+				required><br> <label style="color: #ffd966;"
+				for="message"><b>Message</b></label><br> <input type="text"
+				placeholder="Enter Message Here" name="message" required> <br>
 
 
 			<div class="signupbts">

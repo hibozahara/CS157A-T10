@@ -20,33 +20,37 @@ import dao.UserDao;
 //@WebServlet("/EditDonationServlet")
 public class EditDonationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	private DonationDAO donationDao = new DonationDAO();
 	private TypeDao typeDao = new TypeDao();
 	private CityDao cityDao = new CityDao();
-    private CountyDao countyDao = new CountyDao(); 
-    private UserDao userDao = new UserDao();
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public EditDonationServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	private CountyDao countyDao = new CountyDao();
+	private UserDao userDao = new UserDao();
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public EditDonationServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		String title = request.getParameter("title");
@@ -60,21 +64,20 @@ public class EditDonationServlet extends HttpServlet {
 		int typeId;
 		int cityId;
 		int countyId;
-		
+
 		String destPage = "mydonations.jsp";
-		
+
 		try {
 			typeId = typeDao.getTypeIdByName(typeName);
 			cityId = cityDao.getCityIdByName(cityName);
 			countyId = countyDao.getCountyIdByName(countyName);
-			
+
 			donationDao.updateDonation(donationId, title, typeId, countyId, cityId, quantity, picture, contactInfo);
-			
-		}
-		catch (ClassNotFoundException e) {
+
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		response.sendRedirect(destPage);
 	}
 

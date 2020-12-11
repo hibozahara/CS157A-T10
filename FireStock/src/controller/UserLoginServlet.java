@@ -20,49 +20,52 @@ import model.User;
 //@WebServlet("/UserLoginServlet")
 public class UserLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	private UserDao userDao = new UserDao();
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public UserLoginServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public UserLoginServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
+
 //		RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
 //		dispatcher.forward(request, response); 
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		
+
 		String destPage = "login.jsp";
-		
+
 		try {
 			byte[] salt = userDao.getSaltFromDB(email);
 			User user = userDao.checkLogin(email, password, salt);
-			
-			if(user != null) {
+
+			if (user != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);
 				session.setAttribute("email", email);
 				destPage = "postings.jsp";
-			}
-			else {
+			} else {
 				String message = "Invalid email/password";
 				request.setAttribute("message", message);
 			}
@@ -70,10 +73,10 @@ public class UserLoginServlet extends HttpServlet {
 			// TODO: handle exception
 			throw new ServletException(e);
 		}
-		
+
 //		RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
 //		dispatcher.forward(request, response);
-		
+
 		response.sendRedirect(destPage);
 	}
 

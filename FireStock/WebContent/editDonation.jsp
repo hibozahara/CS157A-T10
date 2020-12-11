@@ -26,7 +26,8 @@
 
 				<div class="text-center"></div>
 				<br>
-				<form method="post" action="<%=request.getContextPath()%>/editDonation"">
+				<form method="post"
+					action="<%=request.getContextPath()%>/editDonation"">
 					<div class="header">
 						Title <input type="text" placeholder="Title" name="title" />
 					</div>
@@ -48,7 +49,8 @@
 						Picture: <input type="text" placeholder="picture" name="picture" />
 					</div>
 					<div class="cardElements" style="text-align: center">
-						Contact Info: <input type="text" placeholder="contact info" name="contactInfo" />
+						Contact Info: <input type="text" placeholder="contact info"
+							name="contactInfo" />
 					</div>
 					<div class="signupbts">
 						<input type="submit" class="postbtn" />

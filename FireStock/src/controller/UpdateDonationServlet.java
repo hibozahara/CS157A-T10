@@ -6,24 +6,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import dao.DonationDAO;
-import model.Donation;
+import dao.RequestDao;
 
 /**
- * Servlet implementation class ExistingPostServlet
+ * Servlet implementation class UpdateDonationServlet
  */
-//@WebServlet("/ExistingPostServlet")
-public class EdittingPostServlet extends HttpServlet {
+//@WebServlet("/UpdateDonationServlet")
+public class UpdateDonationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private DonationDAO donationDao = new DonationDAO();
+	private RequestDao requestDao = new RequestDao();
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public EdittingPostServlet() {
+	public UpdateDonationServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -45,32 +43,34 @@ public class EdittingPostServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String edit = request.getParameter("edit");
-		String delete = request.getParameter("delete");
+		String accept = request.getParameter("Accept");
+		System.out.println(accept);
+		String decline = request.getParameter("Decline");
+		System.out.println(decline);
 		int donationId = Integer.parseInt(request.getParameter("donationId"));
+		int requestingUserId = Integer.parseInt(request.getParameter("requestingUserId"));
 		String destpage = "mydonations.jsp";
+		System.out.println(donationId);
+		System.out.println(requestingUserId);
 
-		if (edit != null) {
-			// edit in editJsp page with passed donation data
-			HttpSession session = request.getSession();
-			session.setAttribute("editDonationId", donationId);
-			destpage = "editDonation.jsp";
-		}
-
-		else if (delete != null) {
-			// delete
+		if (accept != null) {
 			try {
-				donationDao.deleteDonation(donationId);
-
+				requestDao.updateRequestToAcceptByDonationId(donationId, requestingUserId);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
+		} else if (decline != null) {
+			try {
+				System.out.println("request dao");
+				requestDao.updateRequestToDeclineByDonationId(donationId, requestingUserId);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		response.sendRedirect(destpage);
-
 	}
 
 }

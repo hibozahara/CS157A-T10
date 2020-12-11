@@ -14,7 +14,7 @@ public class CityDao {
 	private static String jdbcURL = "jdbc:mysql://localhost:3306/firestock";
 	private static String dbUser = "root";
 	private static String dbPassword = "root";
-	
+
 	public int getCityIdByName(String cityName) throws ClassNotFoundException {
 		String GET_CITYID = "SELECT cityId FROM city WHERE cityName = ?";
 		Class.forName("com.mysql.jdbc.Driver");
@@ -24,18 +24,17 @@ public class CityDao {
 				PreparedStatement ps = connection.prepareStatement(GET_CITYID)) {
 			ps.setString(1, cityName);
 			ResultSet result = ps.executeQuery();
-			
-			if(result.next()) {
+
+			if (result.next()) {
 				id = result.getInt("cityId");
 			}
-			
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return id;
 	}
-	
+
 	public String getCityNameById(int cityId) throws ClassNotFoundException {
 		String GET_CITYNAME = "SELECT cityName FROM city WHERE cityId = ?";
 		Class.forName("com.mysql.jdbc.Driver");
@@ -45,12 +44,11 @@ public class CityDao {
 				PreparedStatement ps = connection.prepareStatement(GET_CITYNAME)) {
 			ps.setInt(1, cityId);
 			ResultSet result = ps.executeQuery();
-			
-			if(result.next()) {
+
+			if (result.next()) {
 				name = result.getString("cityName");
 			}
-			
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

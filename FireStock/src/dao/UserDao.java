@@ -123,7 +123,7 @@ public class UserDao {
 		}
 		return user;
 	}
-	
+
 	public String getUserNameById(int userId) throws ClassNotFoundException {
 
 		String GET_USER_NAME = "SELECT name FROM user WHERE userId = ?";
@@ -143,7 +143,7 @@ public class UserDao {
 		}
 		return name;
 	}
-	
+
 	public int getUserIdByEmail(String email) throws ClassNotFoundException {
 		String GET_USERID = "SELECT userId FROM user WHERE email = ?";
 		Class.forName("com.mysql.jdbc.Driver");

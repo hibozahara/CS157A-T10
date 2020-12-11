@@ -10,7 +10,61 @@ public class Donation {
 	private String title;
 	private String picture;
 	private String contact;
-	
+	private String typeName;
+	private String countyName;
+	private String cityName;
+	private String name;
+	private String status;
+	private int requestingUserId;
+
+	public int getRequestingUserId() {
+		return requestingUserId;
+	}
+
+	public void setRequestingUserId(int requestingUserId) {
+		this.requestingUserId = requestingUserId;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
+
+	public String getCountyName() {
+		return countyName;
+	}
+
+	public void setCountyName(String countyName) {
+		this.countyName = countyName;
+	}
+
+	public String getCityName() {
+		return cityName;
+	}
+
+	public void setCityName(String cityName) {
+		this.cityName = cityName;
+	}
+
 	public int getDonationId() {
 		return donationId;
 	}
@@ -50,8 +104,6 @@ public class Donation {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	
-	
 
 	public int getTypeId() {
 		return typeId;
