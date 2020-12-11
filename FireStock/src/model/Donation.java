@@ -16,7 +16,7 @@ public class Donation {
 	private String name;
 	private String status;
 	private int requestingUserId;
-	
+
 	public int getRequestingUserId() {
 		return requestingUserId;
 	}
@@ -136,6 +136,5 @@ public class Donation {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	
-	
+
 }

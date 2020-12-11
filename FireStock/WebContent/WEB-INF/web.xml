@@ -78,4 +78,13 @@
   	<servlet-name>UpdateDonationServlet</servlet-name>
   	<url-pattern>/updateDonation</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>SearchPostServlet</servlet-name>
+  	<servlet-class>controller.SearchPostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SearchPostServlet</servlet-name>
+  	<url-pattern>/searchPost</url-pattern>
+  </servlet-mapping>
 </web-app>

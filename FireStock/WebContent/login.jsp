@@ -9,7 +9,8 @@
 </head>
 
 <body>
-	<form style="border: 3px solid #fca652" method="post" action="<%= request.getContextPath() %>/login">
+	<form style="border: 3px solid #fca652" method="post"
+		action="<%= request.getContextPath() %>/login">
 		<div class="container" id="form">
 			<a href="home.jsp"><button type="button" class="backbtn">BACK</button></a>
 			<br>
@@ -23,7 +24,7 @@
 			<input type="password" placeholder="Enter Password" name="password"
 				required><br>
 
-			<div class="signupbts">				
+			<div class="signupbts">
 				<button type="submit" class="loginbtn">Login</button>
 			</div>
 		</div>

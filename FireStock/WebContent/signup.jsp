@@ -9,7 +9,8 @@
 </head>
 
 <body>
-	<form style="border: 3px solid #fca652" action="<%= request.getContextPath() %>/register" method="post">
+	<form style="border: 3px solid #fca652"
+		action="<%= request.getContextPath() %>/register" method="post">
 		<div class="container" id="form">
 			<h1 style="color: #ffd966;">Sign up below!</h1>
 			<a href="login.jsp"><button type="button" class="loginbtn">Login</button></a>
@@ -28,13 +29,11 @@
 			<input type="text" placeholder="Enter Email" name="email" required><br>
 
 			<label style="color: #ffd966;" for="pwd"><b>Password</b></label><br>
-			<input type="password" placeholder="Enter Password" name="password" required> 
-			<br> 
-			<label style="color: #ffd966;" for="pwdc"><b>Confirm
-				Password</b>
-			</label>
-			<br> 
-			<input type="password" placeholder="Repeat Password" name="passwordc" required>
+			<input type="password" placeholder="Enter Password" name="password"
+				required> <br> <label style="color: #ffd966;"
+				for="pwdc"><b>Confirm Password</b> </label> <br> <input
+				type="password" placeholder="Repeat Password" name="passwordc"
+				required>
 
 			<div class="signupbts">
 				<a href="home.jsp">

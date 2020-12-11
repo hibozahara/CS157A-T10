@@ -10,9 +10,9 @@
 
 <body>
 	<header>
-		<a href="signup.jsp" class="signUpButton"><b>Sign up!</b></a>
-		<a href="login.jsp" class="loginButton" ><b>Login</b></a>
-		<a href="contactadmin.jsp" class="contactButton"><b>Help</b></a>
+		<a href="signup.jsp" class="signUpButton"><b>Sign up!</b></a> <a
+			href="login.jsp" class="loginButton"><b>Login</b></a> <a
+			href="contactadmin.jsp" class="contactButton"><b>Help</b></a>
 		<h1 id="FS">FireStock</h1>
 	</header>
 
@@ -36,7 +36,7 @@
 		<p>We want to provide a donation platform for affected people to
 			obtain resources they are lacking</p>
 	</section>
-	
+
 
 
 
@@ -89,7 +89,7 @@ p {
 	border-radius: 10px;
 }
 
-.loginButton{
+.loginButton {
 	padding: 15px;
 	display: block;
 	background-color: #ffd966;
@@ -121,11 +121,11 @@ p {
 	background-color: #ffd57e;
 }
 
-.loginButton:hover{
+.loginButton:hover {
 	background-color: #ffd57e;
 }
 
-.contactButton:hover{
+.contactButton:hover {
 	background-color: #ffd57e;
 }
 

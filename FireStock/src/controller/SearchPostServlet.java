@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,18 +14,18 @@ import dao.DonationDAO;
 import model.Donation;
 
 /**
- * Servlet implementation class ExistingPostServlet
+ * Servlet implementation class SearchPostServlet
  */
-//@WebServlet("/ExistingPostServlet")
-public class EdittingPostServlet extends HttpServlet {
+//@WebServlet("/SearchPostServlet")
+public class SearchPostServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private DonationDAO donationDao = new DonationDAO();
+//	private DonationDAO donationDao = new DonationDAO();
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public EdittingPostServlet() {
+	public SearchPostServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -45,32 +47,19 @@ public class EdittingPostServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String edit = request.getParameter("edit");
-		String delete = request.getParameter("delete");
-		int donationId = Integer.parseInt(request.getParameter("donationId"));
-		String destpage = "mydonations.jsp";
-
-		if (edit != null) {
-			// edit in editJsp page with passed donation data
+		String query = request.getParameter("query");
+		String destPage = "postings.jsp";
+		List<Donation> searchedList;
+		try {
+			searchedList = DonationDAO.getDonationsFromSearch(query);
 			HttpSession session = request.getSession();
-			session.setAttribute("editDonationId", donationId);
-			destpage = "editDonation.jsp";
+			session.setAttribute("searchedList", searchedList);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
-		else if (delete != null) {
-			// delete
-			try {
-				donationDao.deleteDonation(donationId);
-
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-		}
-
-		response.sendRedirect(destpage);
-
+		response.sendRedirect(destPage);
 	}
 
 }

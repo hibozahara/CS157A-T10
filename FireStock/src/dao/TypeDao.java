@@ -14,7 +14,7 @@ public class TypeDao {
 	private static String jdbcURL = "jdbc:mysql://localhost:3306/firestock";
 	private static String dbUser = "root";
 	private static String dbPassword = "root";
-	
+
 	public int getTypeIdByName(String typeName) throws ClassNotFoundException {
 		String GET_TYPEID = "SELECT * FROM type WHERE typeName = ?";
 		Class.forName("com.mysql.jdbc.Driver");
@@ -24,18 +24,17 @@ public class TypeDao {
 				PreparedStatement ps = connection.prepareStatement(GET_TYPEID)) {
 			ps.setString(1, typeName);
 			ResultSet result = ps.executeQuery();
-			
-			if(result.next()) {
+
+			if (result.next()) {
 				id = result.getInt("typeId");
 			}
-			
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return id;
 	}
-	
+
 	public String getTypeNameById(int typeId) throws ClassNotFoundException {
 		String GET_TYPENAME = "SELECT typeName FROM type WHERE typeId = ?";
 		Class.forName("com.mysql.jdbc.Driver");
@@ -45,12 +44,11 @@ public class TypeDao {
 				PreparedStatement ps = connection.prepareStatement(GET_TYPENAME)) {
 			ps.setInt(1, typeId);
 			ResultSet result = ps.executeQuery();
-			
-			if(result.next()) {
+
+			if (result.next()) {
 				name = result.getString("typeName");
 			}
-			
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

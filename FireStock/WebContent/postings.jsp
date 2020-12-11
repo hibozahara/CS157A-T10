@@ -18,15 +18,31 @@
 
 <body>
 	<%
-		List<Donation> list = DonationDAO.getDonations();
-	List<User> users = new ArrayList<>();
-	UserDao userDao = new UserDao();
-	for (int i = 0; i < list.size(); i++) {
-		int userId = list.get(i).getUserId();
-		users.add(userDao.getUserById(userId));
+	List<Donation> list = DonationDAO.getDonations();
+	if(request.getParameter("query") == null || request.getParameter("query").isEmpty()) {
+		List<User> users = new ArrayList<>();
+		UserDao userDao = new UserDao();
+		for (int i = 0; i < list.size(); i++) {
+			int userId = list.get(i).getUserId();
+			users.add(userDao.getUserById(userId));
+		}
+		request.setAttribute("list", list);
+		request.setAttribute("users", users);
 	}
-	request.setAttribute("list", list);
-	request.setAttribute("users", users);
+	else {
+		String query = request.getParameter("query");
+		List<Donation> searchedList = DonationDAO.getDonationsFromSearch(query);
+		List<User> users = new ArrayList<>();
+		UserDao userDao = new UserDao();
+		for (int i = 0; i < searchedList.size(); i++) {
+			int userId = searchedList.get(i).getUserId();
+			users.add(userDao.getUserById(userId));
+		}
+		request.setAttribute("list", searchedList);
+		request.setAttribute("users", users);
+	}
+	
+	
 	%>
 
 	<div class="navbar">
@@ -42,10 +58,7 @@
 		</div>
 	</div>
 
-	<%-- <form action="<%= request.getContextPath() %>/searchPosts">
-		<label for="search"><b>Search</b></label><br>
-		<input type="text" placeholder="Enter Search String: " name="q" ><br>
-	</form> --%>
+
 
 	<form action="postings.jsp" method="get">
 		<select name="category" id="category">
@@ -68,7 +81,7 @@
 			<option value="furniture">Furniture</option>
 		</select> <input type="submit" value="Select a Category" />
 	</form>
-	
+
 	<form action="postings.jsp" method="get">
 		<select name="countyName" id="county">
 			<option value="none">None</option>
@@ -89,7 +102,7 @@
 			<option value="Sonoma">Sonoma</option>
 		</select> <input type="submit" value="Select a County" />
 	</form>
-	
+
 	<form action="postings.jsp" method="get">
 		<select name="cityName" id="city">
 			<option value="none">None</option>
@@ -108,9 +121,13 @@
 			<option value="San Jose">San Jose</option>
 			<option value="Red Bluff">Red Bluff</option>
 			<option value="Santa Rosa">Santa Rosa</option>
-		</select> <input type="submit" value="Select a County" />
+		</select> <input type="submit" value="Select a City" />
 	</form>
 
+	<form action="postings.jsp" method="get">
+		<input type="text" placeholder="Search the donations" name="query" />
+		<input type="submit" value="Search" />
+	</form>
 
 	<a href="newPost.jsp"><button type="submit" class="buttonupload">Upload
 			A Donation</button></a>
@@ -160,7 +177,7 @@
 			list.removeIf(condition);
 			%>
 		</c:when>
-		
+
 		<c:when test="${ param.countyName == 'none'}">
 			<c:forEach items="${list}" var="l">
 				<div class="row">
@@ -202,7 +219,7 @@
 			list.removeIf(condition);
 			%>
 		</c:when>
-		
+
 		<c:when test="${ param.cityName == 'none'}">
 			<c:forEach items="${list}" var="l">
 				<div class="row">
@@ -246,36 +263,33 @@
 		</c:when>
 	</c:choose>
 	<c:forEach items="${list}" var="l">
-				<div class="row">
-					<div class="card">
-						<div class="container">
-							<h4 style="text-align: center"></h4>
-							<div class="header">Title: ${ l.getTitle() }</div>
-							<div class="cardElements" style="text-align: center">
-								Quantity: ${ l.getQuantity() }</div>
-							<div class="cardElements" style="text-align: center">
-								Category: ${ l.getTypeName() }</div>
-							<div class="cardElements" style="text-align: center">City:
-								${ l.getCityName() }</div>
-							<div class="cardElements" style="text-align: center">
-								County: ${ l.getCountyName() }</div>
-							<div class="cardElements" style="text-align: center">
-								<img src="${ l.getPicture() }" alt="" height="100px"
-									width="100px" />
-							</div>
-							<br>
-							<div class="text-center">
-								<form action="<%=request.getContextPath()%>/request"
-									method="post">
-									<input type="hidden" name="donationUserId"
-										value="${ l.getUserId() }" /> <input type="submit"
-										value="Request Now"></input>
-								</form>
-							</div>
-						</div>
+		<div class="row">
+			<div class="card">
+				<div class="container">
+					<h4 style="text-align: center"></h4>
+					<div class="header">Title: ${ l.getTitle() }</div>
+					<div class="cardElements" style="text-align: center">
+						Quantity: ${ l.getQuantity() }</div>
+					<div class="cardElements" style="text-align: center">
+						Category: ${ l.getTypeName() }</div>
+					<div class="cardElements" style="text-align: center">City: ${ l.getCityName() }</div>
+					<div class="cardElements" style="text-align: center">County:
+						${ l.getCountyName() }</div>
+					<div class="cardElements" style="text-align: center">
+						<img src="${ l.getPicture() }" alt="" height="100px" width="100px" />
+					</div>
+					<br>
+					<div class="text-center">
+						<form action="<%=request.getContextPath()%>/request" method="post">
+							<input type="hidden" name="donationUserId"
+								value="${ l.getUserId() }" /> <input type="submit"
+								value="Request Now"></input>
+						</form>
 					</div>
 				</div>
-			</c:forEach>
+			</div>
+		</div>
+	</c:forEach>
 
 </body>
 

@@ -29,34 +29,38 @@ import dao.CountyDao;
 //@WebServlet("/NewPostServlet")
 public class NewPostServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	private RequestDao requestDao = new RequestDao();
 	private DonationDAO donationDao = new DonationDAO();
 	private TypeDao typeDao = new TypeDao();
 	private CityDao cityDao = new CityDao();
-    private CountyDao countyDao = new CountyDao(); 
-    private UserDao userDao = new UserDao();
-	
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public NewPostServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	private CountyDao countyDao = new CountyDao();
+	private UserDao userDao = new UserDao();
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public NewPostServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		System.out.println("Here");
 		String title = request.getParameter("name");
@@ -70,15 +74,14 @@ public class NewPostServlet extends HttpServlet {
 		int typeId;
 		int cityId;
 		int countyId;
-		
-		
+
 		String destPage = "postings.jsp";
-		
+
 		try {
 			Donation donation = new Donation();
 			int userId = userDao.getUserIdByEmail(email);
 			typeId = typeDao.getTypeIdByName(typeName);
-			
+
 			cityId = cityDao.getCityIdByName(cityName);
 			countyId = countyDao.getCountyIdByName(countyName);
 			donation.setUserId(userId);
@@ -89,14 +92,14 @@ public class NewPostServlet extends HttpServlet {
 			donation.setQuantity(quantity);
 			donation.setPicture(picture);
 			donation.setContact(contact);
-			
+
 			donationDao.addDonation(donation);
 		}
-		
+
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		response.sendRedirect(destPage);
 	}
 
