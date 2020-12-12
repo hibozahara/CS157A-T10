@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS city (
 CREATE TABLE IF NOT EXISTS request (
 	userId BIGINT UNSIGNED,
     donationId BIGINT UNSIGNED,
-    status VARCHAR(255) NULL,
+    status VARCHAR(255) NOT NULL,
     FOREIGN KEY (userId) REFERENCES user(userId),
     FOREIGN KEY (donationId) REFERENCES donation(donationId)
 );
