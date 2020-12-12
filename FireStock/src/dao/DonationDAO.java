@@ -114,6 +114,11 @@ public class DonationDAO {
 		List<Donation> list = new ArrayList<Donation>();
 		String GET_USERS_DONATIONS = "select * from donation JOIN (SELECT userId AS requestingUserId, donationId, status FROM request) r "
 				+ "USING (donationId) JOIN type USING (typeId) WHERE userId = ? AND status <> 'Accepted'";
+//		String GET_USERS_DONATIONS = "SELECT * "
+//				+ "FROM donation D JOIN county USING (countyId) JOIN city USING (cityId) JOIN request USING (donationId) "
+//				+ "WHERE D.userId = ? AND (status = 'Declined' OR status = 'null' ) ";
+//		String GET_USERS_DONATIONS = "SELECT * FROM donation JOIN type USING (typeId) "
+//				+ "JOIN county USING (countyId) JOIN city USING (cityId) WHERE userId = ?";
 		Class.forName("com.mysql.jdbc.Driver");
 		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
 

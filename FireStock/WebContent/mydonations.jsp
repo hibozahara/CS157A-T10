@@ -84,8 +84,6 @@
 							name="requestingUserId" value="${ l.getRequestingUserId() }" /> <input
 							type="submit" class="button3" name="Accept" value="Accept" /> <input
 							type="submit" class="button4" name="Decline" value="Decline" />
-						<!-- <button type="submit" class="button1">Accept</button>
-	        			<button type="submit" class="button2">Decline</button> -->
 					</form>
 
 				</div>
