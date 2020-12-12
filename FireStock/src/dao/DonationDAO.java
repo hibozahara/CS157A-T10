@@ -112,8 +112,12 @@ public class DonationDAO {
 
 	public static List<Donation> getUsersAllDonations(int userId) throws ClassNotFoundException {
 		List<Donation> list = new ArrayList<Donation>();
-		String GET_USERS_DONATIONS = "select * from donation JOIN (SELECT userId AS requestingUserId, donationId, status FROM request) r "
-				+ "USING (donationId) JOIN type USING (typeId) WHERE userId = ? AND status <> 'Accepted'";
+//		String GET_USERS_DONATIONS = "select * from donation JOIN (SELECT userId AS requestingUserId, donationId, status FROM request) r "
+//				+ "USING (donationId) JOIN type USING (typeId) WHERE userId = ? AND status <> 'Accepted'";
+		String GET_USERS_DONATIONS = "SELECT * "
+				+ "FROM donation D JOIN county USING (countyId) JOIN city USING (cityId) JOIN "
+				+ "(SELECT userId as requestingUserId, donationId, status FROM request) r USING (donationId)"
+				+ "WHERE D.userId = ? AND (status = 'Declined' OR status = 'null')";
 		Class.forName("com.mysql.jdbc.Driver");
 		try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
 
@@ -221,7 +225,7 @@ public class DonationDAO {
 				PreparedStatement ps = connection.prepareStatement(DELETE_DONATION)) {
 
 			ps.setInt(1, donationId);
-			ps.execute();
+			ps.executeUpdate();
 
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -49,6 +49,7 @@ public class EdittingPostServlet extends HttpServlet {
 		String delete = request.getParameter("delete");
 		int donationId = Integer.parseInt(request.getParameter("donationId"));
 		String destpage = "mydonations.jsp";
+		System.out.println(donationId);
 
 		if (edit != null) {
 			// edit in editJsp page with passed donation data

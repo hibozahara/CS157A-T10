@@ -17,7 +17,7 @@
 		</div>
 	</div>
 
-	<h3 style="text-align: center">Header:</h3>
+	<h3 style="text-align: center">Edit your donation!</h3>
 
 
 	<div class="row">
